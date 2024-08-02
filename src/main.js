@@ -13,7 +13,7 @@ app.mount('#app')
 
 import { createApp, markRaw } from 'vue';
 import { createPinia } from 'pinia';
-import router from './src/router';
+import router from './router';
 
 /* import './localAxios'; */
 import './style.css';
