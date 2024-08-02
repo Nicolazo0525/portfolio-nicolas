@@ -13,11 +13,11 @@ app.mount('#app')
 
 import { createApp, markRaw } from 'vue';
 import { createPinia } from 'pinia';
-import router from './src/router';
+import router from './router';
 
 /* import './localAxios'; */
-import './src/style.css';
-import App from './src/App.vue';
+import './style.css';
+import App from './App.vue';
 
 const pinia = createPinia();
 
