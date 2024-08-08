@@ -74,9 +74,9 @@ getToken().then(token => {
     </div>
     
     <div class="text-red-500 font-serif">
-        <template v-for="theme in track">
+        <!-- <template v-for="theme in track">
             {{ theme }}
-        </template>
+        </template> -->
     </div>
 </template>
 
