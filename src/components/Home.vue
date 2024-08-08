@@ -34,7 +34,7 @@ const clientId = '52dd07aefe5147f7bed88258d1ad7af7';
 const clientSecret = '83115b146b204cf0ad23314e43f1ba2d';
 const authUrl = 'https://accounts.spotify.com/api/token';
 
-const getToken = async () => {
+/* const getToken = async () => {
     const response = await fetch(authUrl, {
         method: 'POST',
         headers: {
@@ -50,7 +50,7 @@ const getToken = async () => {
 
 getToken().then(token => {
     console.log('Token de acceso:', token);
-});
+}); */
 
 </script>
 
