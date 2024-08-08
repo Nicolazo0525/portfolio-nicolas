@@ -24,8 +24,7 @@ export default function useTrack() {
             track.value = response.data.tracks.items[0];/* 
             duration.value = response.data.tracks.items[0].duration_ms; */
             image.value = response.data.images[0].url;
-            console.log(album.value);
-            console.log(track.value);/* 
+            /* 
             console.log(duration.value) */
 
         }catch (error){

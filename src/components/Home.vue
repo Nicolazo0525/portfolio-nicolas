@@ -7,8 +7,6 @@ const {getTrack, album, track, image, errorsCategory} = useTrack();
 
 onMounted(async()=>{
     getTrack();
-    console.log(track);
-    console.log(errorsCategory)
 })
 /* 
 const token = 'BQBGIp9XvI2IoknpRyTSJDZKxDiJxqVdc6a01gZ0wtkDuwbQUKcqXpxIvQ3RSYUjmQCs9-YItgZXTNsUaS8OOUY2gknDSU42qKv3yEmPfFyl73a1G30'; */
