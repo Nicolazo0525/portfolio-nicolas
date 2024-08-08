@@ -6,7 +6,27 @@ import { ref, onMounted } from 'vue';
 
 const toggleLayout = ref(false)
 
+if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+  document.documentElement.classList.add('dark')
+} else {
+  document.documentElement.classList.remove('dark')
+}
 
+const toggleDarkMode = ref(document.documentElement.className === 'dark')
+
+
+const changeDarkMode = () => {
+    toggleDarkMode.value = document.documentElement.classList.toggle('dark')
+    
+    //Operador ternario
+    toggleDarkMode.value ? localStorage.theme = 'dark' : localStorage.theme = 'light'
+}
+
+const isDarkMode = ref(true)
+
+/* function toggleDarkModeOne(){
+  isDarkMode.value = !isDarkMode.value;
+} */
 const changeLayout = () => {
     if (toggleLayout.value == false) {
       toggleLayout.value = true
@@ -14,16 +34,24 @@ const changeLayout = () => {
       toggleLayout.value = false
     }
 }
-Layout
+
 </script>
 
 <template>
-  <main class="bg-gray-100 dark:bg-gradient-to-r from-slate-900 to-blue-500 ">
-    <layout/>
-    <router-view></router-view>
-  </main>
+    <main>
+      {{ toggleDarkMode }}
+      <div :class="{'dark-mode':toggleDarkMode}" class="example">
+        <layout/>
+        <router-view></router-view>
+      </div>
+    </main>
+  
+  
 </template>
-<style>
+<style >
+.example {
+  color: red;
+}
 ::-webkit-scrollbar {
   width: 6px;
   height: 6px;
@@ -44,5 +72,23 @@ Layout
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
   background: rgb(243, 104, 104);
+}
+
+
+/* Track */
+.dark-mode::-webkit-scrollbar-track {
+  background: #6d7b9e; 
+  border-radius: 5px;
+}
+
+/* Handle */
+.dark-mode::-webkit-scrollbar-thumb {
+  background: #0B1120;
+  border-radius: 5px;
+}
+
+/* Handle on hover */
+.dark-mode::-webkit-scrollbar-thumb:hover {
+  background: #273455;
 }
 </style>
