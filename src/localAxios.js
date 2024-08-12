@@ -36,7 +36,7 @@ const getTokenAccount = async () => {
 }
 
 const localAxios = await axios.create({
-    baseURL: 'https://api.spotify.com/v1/'
+    baseURL: 'https://api.spotify.com/v1/' 
 });
 
 // Uso de la función
