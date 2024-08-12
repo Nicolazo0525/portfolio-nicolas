@@ -1,5 +1,6 @@
-import localAxios from "../localAxios";
 import { ref } from "vue";
+import localAxios from "../localAxios";
+
 
 export default function useTrack() {
 
@@ -29,8 +30,9 @@ export default function useTrack() {
 
         }catch (error){
             console.log(error)
-            if(error.response.status != 200){
-                errorsAlbum.value = error.response.data.errors
+            if(typeof error.response.data.error !== 'undefined'){
+                errorsAlbum.value = error.response.data.error
+                console.log(errorsAlbum)
             }
 
         }
