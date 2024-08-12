@@ -28,7 +28,7 @@ export default function useTrack() {
             console.log(duration.value) */
 
         }catch (error){
-
+            console.log(error)
             if(error.response.status != 200){
                 errorsAlbum.value = error.response.data.errors
             }

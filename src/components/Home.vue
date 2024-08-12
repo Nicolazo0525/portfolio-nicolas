@@ -5,8 +5,9 @@ import useTrack from "../composables/track"
 const {getTrack, album, track, image, errorsCategory} = useTrack();
 
 
+
 onMounted(async()=>{
-    getTrack();
+    getTrack(errorsCategory);
 })
 /* 
 const token = 'BQBGIp9XvI2IoknpRyTSJDZKxDiJxqVdc6a01gZ0wtkDuwbQUKcqXpxIvQ3RSYUjmQCs9-YItgZXTNsUaS8OOUY2gknDSU42qKv3yEmPfFyl73a1G30'; */
@@ -32,7 +33,6 @@ const trackUri = 'spotify:track:1Qa2k4UzzF1X7QVTViJpdG?si=748979638ea64231';
  */
 const clientId = '52dd07aefe5147f7bed88258d1ad7af7';
 const clientSecret = '83115b146b204cf0ad23314e43f1ba2d';
-const authUrl = 'https://accounts.spotify.com/api/token';
 
 /* const getToken = async () => {
     const response = await fetch(authUrl, {
