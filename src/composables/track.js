@@ -34,6 +34,10 @@ export default function useTrack() {
                 errorsAlbum.value = error.response.data.error
                 console.log(errorsAlbum) 
             }
+            if(typeof error.response.data.error == 401){
+                errorsAlbum.value = error.response.data.error
+                console.log(errorsAlbum) 
+            }
 
         }
 
