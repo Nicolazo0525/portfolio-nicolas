@@ -15,12 +15,10 @@ export default function useTrack() {
     const errorsAlbum = ref('')
 
     const getTrack = async () => {
-        // tracks
-        /* let response = await localAxios.get('artists/1Qp56T7n950O3EGMsSl81D?si=s_5VsleJQFGhdRXMz7uBCA'); */
-        // albums
         
         try{
             let response = await localAxios.get('albums/6Nws2NAPuxaHzB7MfD1lhg?si=A_f1rF8wRfuYtO5BPLCdNA');
+            console.log(response)
             album.value = response.data;
             track.value = response.data.tracks.items[0];/* 
             duration.value = response.data.tracks.items[0].duration_ms; */
@@ -29,18 +27,25 @@ export default function useTrack() {
             console.log(duration.value) */
 
         }catch (error){
-            if(typeof error.response.data.error === 'Unauthorized'){
-                errorsAlbum.value = error.response.data.error
+            console.log(error)
+            if(error.response.data.error.message === 'Unauthorized'){
+                errorsAlbum.value = error.response.data.error.message
                 console.log(errorsAlbum) 
             }
-            if(typeof error.response.data.error === 401){
-                errorsAlbum.value = error.response.data.error
+            if(error.response.data.error.status === 401){
+                errorsAlbum.value = error.response.data.error.message
+                console.log(errorsAlbum) 
+            }
+            if (error.response.data.error.status === 400) {
+                errorsAlbum.value = error.response.data.error.status
                 console.log(errorsAlbum) 
             }
 
         }
 
     }
+    
+    setTimeout(getTrack, 1)
 
     return{
         getTrack,
