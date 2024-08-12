@@ -6,6 +6,9 @@ const clientSecret = '83115b146b204cf0ad23314e43f1ba2d';
 const tokenOne = 'BQDRToCbGWAR5M9HuBBqAAe0lmhJEsR0XfnNRwenB9xOzrNaui7d7AdFkS59WQ12tUAREnuHbOl860b1tEMP3W6Z8NXNFZW_Z1Qzo2mcwnH1SFj8xpY'
 
 
+const localAxios = axios.create({
+    baseURL: 'https://api.spotify.com/v1/' 
+});
 
 const getToken = async () => {
     const response = await fetch(authUrl, {
@@ -33,26 +36,12 @@ const getTokenAccount = async () => {
         console.error('Error obteniendo el token:', error);
     }
 }
-/* setTimeout(getTokenAccount, 1) */
-
-
-// Uso de la función
-
-/* console.log(data) */
-/* getToken().then(token => {
-    console.log('Token de acceso:', token);
-    const tokenAccount = token
-}); */
-
-/* console.log(token) */
-/* const token = '1POdFZRZbvb...qqillRxMr2z'; */
-
+setTimeout(getTokenAccount, 1)
 
 getTokenAccount().then(tokenAccount => {
     console.log('Token Account:', tokenAccount);
     localAxios.interceptors.request.use(
         config => {
-            console.log('Token Account:', tokenAccount);
             config.headers['Authorization'] = `Bearer ${tokenAccount}`;
             config.headers['Content-Type'] = 'application/json';
             return config;
@@ -64,9 +53,6 @@ getTokenAccount().then(tokenAccount => {
     );
 });
 
-const localAxios = axios.create({
-    baseURL: 'https://api.spotify.com/v1/' 
-});
 
 // Request interceptors for API calls
 

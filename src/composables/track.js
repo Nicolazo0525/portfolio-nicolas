@@ -4,20 +4,18 @@ import localAxios from "../localAxios";
 
 export default function useTrack() {
 
-    const apiToken = '52dd07aefe5147f7bed88258d1ad7af7';
-    const apiTokenSong = '1Qa2k4UzzF1X7QVTViJpdG?si=236debcc3bd943ee';
-    const trackUri = 'spotify:track:1Qa2k4UzzF1X7QVTViJpdG?si=748979638ea64231';
-
     const album = ref([])
     const track = ref([])
     const image = ref([])
     const duration = ref([])
     const errorsAlbum = ref('')
+    const tokenSong = ref('6Nws2NAPuxaHzB7MfD1lhg?si=A_f1rF8wRfuYtO5BPLCdNA')
 
+    
     const getTrack = async () => {
         
         try{
-            let response = await localAxios.get('albums/6Nws2NAPuxaHzB7MfD1lhg?si=A_f1rF8wRfuYtO5BPLCdNA');
+            let response = await localAxios.get('albums/' + tokenSong.value);
             console.log(response)
             album.value = response.data;
             track.value = response.data.tracks.items[0];/* 
@@ -25,27 +23,14 @@ export default function useTrack() {
             image.value = response.data.images[0].url;
             /* 
             console.log(duration.value) */
-
+           
         }catch (error){
             console.log(error)
-            if(error.response.data.error.message === 'Unauthorized'){
-                errorsAlbum.value = error.response.data.error.message
-                console.log(errorsAlbum) 
-            }
-            if(error.response.data.error.status === 401){
-                errorsAlbum.value = error.response.data.error.message
-                console.log(errorsAlbum) 
-            }
-            if (error.response.data.error.status === 400) {
-                errorsAlbum.value = error.response.data.error.status
-                console.log(errorsAlbum) 
-            }
-
         }
 
     }
     
-    setTimeout(getTrack, 1)
+    
 
     return{
         getTrack,

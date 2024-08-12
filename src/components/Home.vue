@@ -6,8 +6,8 @@ const {getTrack, album, track, image, errorsAlbum} = useTrack();
 
 
 
-onMounted(async()=>{ 
-    await getTrack();
+onMounted(()=>{ 
+    getTrack();
 })
 
 </script>
