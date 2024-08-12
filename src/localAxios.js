@@ -14,7 +14,7 @@ const localAxios = await axios.create({
 const getToken = async () => {
     const response = await fetch(authUrl, {
         method: 'POST',
-        headers: {
+        headers: { 
             'Content-Type': 'application/x-www-form-urlencoded',
             'Authorization': 'Basic ' + btoa(clientId + ':' + clientSecret)
         },
