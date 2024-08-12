@@ -25,7 +25,7 @@ const getToken = async () => {
     return data.access_token;
 };
 
-setInterval(getToken, 1800000);
+setInterval(getToken, 1000000);
 
 const getTokenAccount = async () => {
     try {
