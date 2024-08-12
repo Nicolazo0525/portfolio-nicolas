@@ -30,7 +30,7 @@ export default function useTrack() {
 
         }catch (error){
             console.log(error)
-            if(typeof error.response.data.error !== 'undefined'){
+            if(typeof error.response.data.error === 'Unauthorized'){
                 errorsAlbum.value = error.response.data.error
                 console.log(errorsAlbum)
             }

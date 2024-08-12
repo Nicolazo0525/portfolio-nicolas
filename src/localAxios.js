@@ -5,6 +5,11 @@ const clientId = '52dd07aefe5147f7bed88258d1ad7af7';
 const clientSecret = '83115b146b204cf0ad23314e43f1ba2d';
 const tokenOne = 'BQDRToCbGWAR5M9HuBBqAAe0lmhJEsR0XfnNRwenB9xOzrNaui7d7AdFkS59WQ12tUAREnuHbOl860b1tEMP3W6Z8NXNFZW_Z1Qzo2mcwnH1SFj8xpY'
 
+
+const localAxios = axios.create({
+    baseURL: 'https://api.spotify.com/v1/'
+});
+
 const getToken = async () => {
     const response = await fetch(authUrl, {
         method: 'POST',
@@ -21,7 +26,7 @@ const getToken = async () => {
 
 setInterval(getToken, 60000);
 
-async function getTokenAccount() {
+const getTokenAccount = async () => {
     try {
         const token = await getToken();
         console.log('Token de acceso:', token);
@@ -43,10 +48,6 @@ async function getTokenAccount() {
 /* console.log(token) */
 /* const token = '1POdFZRZbvb...qqillRxMr2z'; */
 
-
-const localAxios = axios.create({
-    baseURL: 'https://api.spotify.com/v1/'
-});
 
 getTokenAccount().then(tokenAccount => {
     console.log('Token Account:', tokenAccount);
