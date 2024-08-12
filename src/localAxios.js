@@ -6,7 +6,7 @@ const clientSecret = '83115b146b204cf0ad23314e43f1ba2d';
 const tokenOne = 'BQDRToCbGWAR5M9HuBBqAAe0lmhJEsR0XfnNRwenB9xOzrNaui7d7AdFkS59WQ12tUAREnuHbOl860b1tEMP3W6Z8NXNFZW_Z1Qzo2mcwnH1SFj8xpY'
 
 
-const localAxios = await axios.create({
+const localAxios = axios.create({
     baseURL: 'https://api.spotify.com/v1/' 
 });
 
