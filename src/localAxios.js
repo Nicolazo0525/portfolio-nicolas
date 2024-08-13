@@ -36,7 +36,6 @@ const getTokenAccount = async () => {
         console.error('Error obteniendo el token:', error);
     }
 }
-setTimeout(getTokenAccount, 1)
 
 getTokenAccount().then(tokenAccount => {
     console.log('Token Account:', tokenAccount);
