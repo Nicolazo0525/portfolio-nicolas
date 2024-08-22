@@ -14,6 +14,7 @@ export default defineConfig({
     }
   }
 }) */
+/* Local */
 /* import { defineConfig } from 'vite'
 import vue from '@vitejs/plugin-vue'
 
@@ -23,8 +24,9 @@ import vue from '@vitejs/plugin-vue'
   server:{
     port:3000
   }
-}) */ 
-import { defineConfig } from 'vite'
+})  */
+/* Github Pages */
+/* import { defineConfig } from 'vite'
 import vue from '@vitejs/plugin-vue'
 
 // https://vitejs.dev/config/
@@ -32,4 +34,15 @@ export default defineConfig({
   plugins: [vue()],
   // base: 'https://nicolazo0525.github.io/portfolio-nicolas/',
   base: '/portfolio-nicolas/',
+}) */
+
+/* Vervel */
+import { defineConfig } from 'vite'
+import vue from '@vitejs/plugin-vue'
+
+// https://vitejs.dev/config/
+export default defineConfig({
+  plugins: [vue()],
+  // base: 'https://nicolazo0525.github.io/portfolio-nicolas/',
+  base: 'https://portfolio-nicolas-ashen.vercel.app',
 })
