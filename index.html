@@ -17,8 +17,9 @@
 <!-- 404 error -->
 <script type="text/javascript">
   var path = window.location.pathname;
+  console.log(path)
   if(!path.startsWith('/portfolio-nicolas/')){
-    window.location.replace('/portfolio-nicolas/' + path)
+    window.location.replace(path)
   }
 </script>
 
