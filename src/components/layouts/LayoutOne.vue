@@ -51,6 +51,30 @@ if (localStorage.active === 'false' || (!('active' in localStorage))) {
   document.documentElement.classList.remove('false')
 }
 
+const handleKeydown = (event) => {
+  switch (event.key) {
+    case 'ArrowLeft':
+      console.log('izquierda')
+      break;
+
+    case 'ArrowRight':
+      console.log('Derecha')
+      break;
+    case 'ArrowUp':
+      console.log('Arriba')
+      break;
+    case 'ArrowDown':
+      console.log('Abajo')
+      break;
+    case 'Enter':
+      console.log('Enter')
+      break;
+
+  
+    default:
+      break;
+  }
+}
 
   /* function isActive(path){
     route.path == path;
@@ -69,7 +93,7 @@ if (localStorage.active === 'false' || (!('active' in localStorage))) {
 
 </script>
 <template>
-    <nav class=" w-full shadow-md h-20 bg-white flex border-2 border-b-secundary-buttonlagout justify-between px-12 z-40">
+    <nav @keydown="handleKeydown" tabindex="0" class=" w-full shadow-md h-20 bg-white flex border-2 border-b-secundary-buttonlagout justify-between px-12 z-40">
         <div class=" flex items-center ">
             <router-link :to="{name: 'AboutMe'}" class="text-2xl hover:text-cyan-500 transition-colors cursor-pointer">
               <img src="../../../public/logo_horizontal_grey.png" class="w-26 h-10" alt="">
