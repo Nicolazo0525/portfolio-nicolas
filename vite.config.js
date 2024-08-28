@@ -37,7 +37,7 @@ export default defineConfig({
 }) */
 
 /* Vervel */
-import { defineConfig } from 'vite'
+/* import { defineConfig } from 'vite'
 import vue from '@vitejs/plugin-vue'
 
 // https://vitejs.dev/config/
@@ -45,4 +45,15 @@ export default defineConfig({
   plugins: [vue()],
   // base: 'https://nicolazo0525.github.io/portfolio-nicolas/',
   base: 'https://portfolio-nicolas-ashen.vercel.app',
+})
+ */
+
+/* Netlify */
+import { defineConfig } from 'vite'
+import vue from '@vitejs/plugin-vue'
+
+// https://vitejs.dev/config/
+export default defineConfig({
+  plugins: [vue()],
+  base: 'https://portfolio-nicolas-ramos.netlify.app/',
 })

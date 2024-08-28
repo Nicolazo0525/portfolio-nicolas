@@ -12,6 +12,7 @@ export default {
           /* default: '#b6b09b', */
           default: '#bab6a1',
           buttonlagout: '#b6b299',
+          buttonText: '#362c3a',
         },
         secundary: {
           default: '#797767',

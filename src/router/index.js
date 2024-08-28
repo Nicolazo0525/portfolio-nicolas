@@ -9,8 +9,8 @@ import Media from '../components/Categories/Media.vue';
 
 const routes = [
     {
-        path: "/portfolio-nicolas/",
-        /* path: "/", */
+        /* path: "/portfolio-nicolas/", */
+        path: "/",
         name: "AboutMe",
         component: AboutMe
     },
@@ -20,22 +20,22 @@ const routes = [
         component: AboutMe
     }, */
     {
-        path: "/portfolio-nicolas/project/",
+        path: "/projects/",
         name: "Project",
         component: Project
     },
     {
-        path: "/portfolio-nicolas/certificates/",
+        path: "/certificates/",
         name: "Certificate",
         component: Certificate
     },
     {
-        path: "/portfolio-nicolas/skills/",
+        path: "/skills/",
         name: "Skill",
         component: Skill
     },
     {
-        path: "/portfolio-nicolas/media/",
+        path: "/media/",
         name: "Media",
         component: Media
     }

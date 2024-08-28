@@ -1,5 +1,5 @@
 <script setup>
-import { ref } from 'vue';
+import { provide, ref } from 'vue';
 import Layout from './components/layouts/LayoutOne.vue';
 import LayoutLeft from './components/layouts/LayoutLeft.vue';
 
@@ -12,7 +12,9 @@ const changeLayout = () => {
       toggleLayout.value = false
     }
 }
+const isHovered = ref(false)
 
+provide('isHovered', isHovered)
 </script>
 
 <template>
