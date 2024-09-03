@@ -15,12 +15,12 @@ const {getTrack, album, track, image, errorsAlbum} = useTrack();
 <template>
     <main class="h-full dark:bg-secundary-buttonlagout p-12 ">
         <div class="z-20 items-center index_beams__yWcJT flex flex-row row-span-2 justify-center">
-            <div class="flex justify-center">
+            <div class="flex z-20 justify-center">
                 <div class="w-96 h-96">
                     <img src="../../../public/photo.png" alt="">
                 </div>
             </div>
-            <div class="text-justify">
+            <div class="z-20 text-justify">
                 
                 <p>
                     Junior Software Developer with a Passion for Code.
