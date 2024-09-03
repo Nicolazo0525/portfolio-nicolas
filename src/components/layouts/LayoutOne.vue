@@ -123,10 +123,25 @@ function setHovered(value) {
  */
 /* console.log(route.path) */
 
+const gridItems = ref([])
+
+const generateGridItems = () => {
+  const numColums = Math.floor(window.innerWidth / 155)
+  const numRows = 3
+  const totalItems = numColums * numRows 
+  gridItems.value = Array.from({ length: totalItems }, (_, i) => i + 1 )
+  console.log(`Columns: ${numColumns}, Rows: ${numRows}`)
+}
+
+onMounted(()=>{
+  generateGridItems()
+  window.addEventListener('resize', generateGridItems)
+})
+
 </script>
 <template>
   <nav class="relative">
-    <div @keydown="handleKeydown" tabindex="0" class="w-full shadow-md h-[4.3rem] bg-white flex border-2 border-b-secundary-buttonlagout justify-between px-12 z-40">
+    <div @keydown="handleKeydown" tabindex="0" class="w-full shadow-md h-[4.3rem] flex border-b-2 border-b-secundary-buttonlagout justify-between px-12 z-40">
       <div class=" flex items-center ">
           <router-link :to="{name: 'AboutMe'}" class="text-2xl hover:text-cyan-500 transition-colors cursor-pointer">
             <img src="../../../public/logo_horizontal_grey.png" class="w-26 h-10" alt="">
@@ -173,7 +188,7 @@ function setHovered(value) {
                         <label for="AboutMe" class="hover:border-y-2 py-2 border-secundary-buttonDefoult">
                           <router-link :to="{name: 'AboutMe'}" @mouseover="setHovered(true)"  v-slot="{ href, navigate }" :key="index" :class="{ active: index === countKeyButton }">
                             <button :href="href" @click="navigate" @mouseleave="show = false" value="1" 
-                              class="relative inline-block overflow-hidden uppercase px-2 py-1 w-32 bg-primary-buttonlagout p-2 btn-ola hover:text-primary-default transition-colors cursor-pointer">
+                              class="relative inline-block overflow-hidden uppercase px-2 py-1 w-32 bg-primary-butonBack p-2 btn-ola hover:text-primary-default transition-colors cursor-pointer">
                               <span>About Me</span>
                             </button>
                           </router-link>
@@ -210,7 +225,7 @@ function setHovered(value) {
                           <router-link :to="{name: 'Skill'}" v-slot="{ href, navigate }" @mouseover="setHovered(true)"
                           @mouseleave="setHovered(false)"  class="">
                             <button :href="href" @click="navigate" @mouseover="show = true" @mouseleave="show = false" value="3"
-                              class="relative inline-block overflow-hidden uppercase px-2 py-1 w-32 bg-primary-buttonlagout p-2 btn-ola hover:text-primary-default transition-colors cursor-pointer">
+                              class="relative inline-block overflow-hidden uppercase px-2 py-1 w-32 bg-primary-butonBack p-2 btn-ola hover:text-primary-default transition-colors cursor-pointer">
                               <span>Skills</span>
                             </button>
                           </router-link>
@@ -232,7 +247,9 @@ function setHovered(value) {
                         <label for="AboutMe py-2" class="">
                           <router-link :to="{name: 'Project'}" v-slot="{ href, navigate }" class="">
                             <button :href="href" @click="navigate" @mouseover="show = true" @mouseleave="show = false" class="boton-cambio-color uppercase px-2 pt-1 pb-4 w-32 transition-all duration-300 bg-secundary-buttonlagout text-primary-default hover:bg-primary-buttonlagout hover:text-secundary-buttonlagout">
-                              span
+                              <span>
+                                Projects
+                              </span>
                             </button>
                           </router-link>
                         </label>
@@ -245,7 +262,7 @@ function setHovered(value) {
                         <label for="AboutMe" class="hover:border-y-2 py-2 border-secundary-buttonDefoult">
                           <router-link :to="{name: 'Project'}" v-slot="{ href, navigate }" class="">
                             <button :href="href" @click="navigate" @mouseover="show = true" @mouseleave="show = false" value="2"
-                              class=" relative inline-block overflow-hidden uppercase px-2 py-1 w-32 bg-primary-buttonlagout p-2 btn-ola hover:text-primary-default transition-colors cursor-pointer">
+                              class=" relative inline-block overflow-hidden uppercase px-2 py-1 w-32 bg-primary-butonBack p-2 btn-ola hover:text-primary-default transition-colors cursor-pointer">
                               <span>Projects</span>
                             </button>
                           </router-link>
@@ -280,7 +297,7 @@ function setHovered(value) {
                         <label for="Certificate" class="hover:border-y-2 py-2 border-secundary-buttonDefoult">
                           <router-link :to="{name: 'Certificate'}" v-slot="{ href, navigate }" class="">
                             <button :href="href" @click="navigate" @mouseover="show = true" @mouseleave="show = false" value="4"
-                              class=" relative inline-block overflow-hidden uppercase px-2 py-1 w-32 bg-primary-buttonlagout p-2 btn-ola hover:text-primary-default transition-colors cursor-pointer">
+                              class=" relative inline-block overflow-hidden uppercase px-2 py-1 w-32 bg-primary-butonBack p-2 btn-ola hover:text-primary-default transition-colors cursor-pointer">
                               <span>Certificates</span>
                             </button>
                           </router-link>
@@ -315,7 +332,7 @@ function setHovered(value) {
                         <label for="AboutMe" class="hover:border-y-2 py-2 border-secundary-buttonDefoult">
                           <router-link :to="{name: 'Media'}" v-slot="{ href, navigate }" class="">
                             <button :href="href" @click="navigate" @mouseover="show = true" @mouseleave="show = false"
-                              class="relative inline-block overflow-hidden uppercase px-2 py-1 w-32 text-primary-buttonText hover:text-primary-default bg-primary-buttonlagout p-2  btn-ola  transition-colors cursor-pointer">
+                              class="relative inline-block overflow-hidden uppercase px-2 py-1 w-32 text-primary-buttonText hover:text-primary-default bg-primary-butonBack p-2  btn-ola  transition-colors cursor-pointer">
                               <span>Media</span>
                             </button>
                           </router-link>
@@ -356,8 +373,8 @@ function setHovered(value) {
       </div>
 
     </div>
-    <div class="flex flex-row mx-12">
-      <template v-for="n in 22" :key="n">
+    <div class="flex flex-row mx-12 justify-center">
+      <template v-for="n in gridItems" :key="n">
         <div class="w-14 h-10">
           <div class="w-full grid grid-cols-3 grid-rows-1">
             <div class="w-full col-start-1 col-end-2 flex justify-start">
@@ -422,7 +439,7 @@ function setHovered(value) {
   left: -100%;
   width: 100%;
   height: 100%;
-  background-color: #4e4b42;
+  background-color: #716858;
   transition: left 0.1s ease;
   z-index: 0;
 }
@@ -444,7 +461,7 @@ function setHovered(value) {
   opacity: 0;
   transform-origin: 50% 0%;
   transition-duration: 0.25s;
-  filter: brightness(5%) saturate(42%) invert(82%) sepia(30%) saturate(200%) hue-rotate(20deg) brightness(95%) contrast(100%) grayscale(10%);
+  filter: brightness(10%) saturate(45%) invert(35%) sepia(33%) saturate(200%) hue-rotate(20deg) brightness(95%) contrast(100%) grayscale(10%);
 }
 .button_over:hover + .object_img {
   opacity: 100;

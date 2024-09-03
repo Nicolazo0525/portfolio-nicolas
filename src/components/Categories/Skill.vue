@@ -4,6 +4,14 @@ import { inject } from "vue";
 const isHovered = inject('isHovered')
 </script>
 <template>
+  <!-- <div class=" flex justify-center items-center h-[100vh] bg-black m-0">
+    <div class="grid-continer w-full">
+      <div class="grid-item"></div>
+      <div class="grid-item"></div>
+      <div class="grid-item"></div>
+    
+    </div>
+  </div> -->
   <div class="order-2 button_over cursor-pointer pt-12">
     <label for="ButtonTwo" class="hover:border-y-2 py-2 border-secundary-buttonDefoult">
       <button @mouseover="show = true" @mouseleave="show = false" id="2" value="2" name="buttonTwo"

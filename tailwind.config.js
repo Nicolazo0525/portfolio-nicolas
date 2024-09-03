@@ -13,11 +13,14 @@ export default {
           default: '#bab6a1',
           buttonlagout: '#b6b299',
           buttonText: '#362c3a',
+          defaultback: '#d6ceb6',
+          butonBack: '#b0ab97',
         },
         secundary: {
           default: '#797767',
           buttonlagout: '#716858',
           buttonDefoult: '#49483d',
+          guionColor: '#b1ab96',
         },
         
       },
