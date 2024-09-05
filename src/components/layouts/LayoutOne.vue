@@ -216,7 +216,7 @@ onMounted(()=>{
                   <template v-if="route.path === '/skills/'">
                     <div class="flex flex-row items-center">
                       <div class="">
-                        <img src="../../../public/arrow_icon_two.png" alt="" class="w-8 pointer-events-none rotate-[-90deg] absolute top-0 left-[10.2em] order-1">
+                        <img src="../../../public/arrow_icon_two.png" alt="" class="w-8 pointer-events-none rotate-[-90deg] absolute top-0 left-[11.2em] order-1">
                       </div>
                       <div class="order-2 button_over cursor-pointer">
                         <label for="Skill" class="">
@@ -257,7 +257,7 @@ onMounted(()=>{
                           </router-link>
                         </label>
                       </div>
-                      <div class="inline-block absolute pointer-events-none top-0 transform -translate-x-1/2 left-[10.2em] order-1 object_img animate-color-change">
+                      <div class="inline-block absolute pointer-events-none top-0 transform -translate-x-1/2 left-[11.2em] order-1 object_img animate-color-change">
                         <img src="../../../public/arrow_icon_one.png" alt="" class="w-8 rotate-[-90deg]">
                       </div>
                     </div>
@@ -267,7 +267,7 @@ onMounted(()=>{
                   <template v-if="route.path === '/projects/'">
                     <div class="flex flex-row items-center">
                       <div class="">
-                        <img src="../../../public/arrow_icon_two.png" alt="" class="w-8 pointer-events-none rotate-[-90deg] absolute top-0 left-[19.7em] order-1">
+                        <img src="../../../public/arrow_icon_two.png" alt="" class="w-8 pointer-events-none rotate-[-90deg] absolute top-0 left-[21.7em] order-1">
                       </div>
                       <div class="order-2 button_over cursor-pointer">
                         <label for="AboutMe py-2" class="">
@@ -306,7 +306,7 @@ onMounted(()=>{
                           </router-link>
                         </label>
                       </div>
-                      <div class="absolute pointer-events-none top-0 transform -translate-x-1/2 left-[19.7em] order-1 object_img animate-color-change">
+                      <div class="absolute pointer-events-none top-0 transform -translate-x-1/2 left-[21.7em] order-1 object_img animate-color-change">
                         <img src="../../../public/arrow_icon_one.png" alt="" class="w-8 rotate-[-90deg]">
                       </div>
                     </div>
@@ -316,7 +316,7 @@ onMounted(()=>{
                   <template v-if="route.path === '/certificates/'">
                     <div class="flex flex-row items-center">
                       <div class="">
-                        <img src="../../../public/arrow_icon_two.png" alt="" class="w-8 pointer-events-none rotate-[-90deg] absolute top-0 right-[20.7em] order-1">
+                        <img src="../../../public/arrow_icon_two.png" alt="" class="w-8 pointer-events-none rotate-[-90deg] absolute top-0 right-[22.7em] order-1">
                       </div>
                       <div class="order-2 button_over cursor-pointer">
                         <label for="Studie" class="">
@@ -368,7 +368,7 @@ onMounted(()=>{
                   <template v-if="route.path === '/media/'">
                     <div class="flex flex-row items-center">
                       <div class="">
-                        <img src="../../../public/arrow_icon_two.png" alt="" class="z-50 w-8 pointer-events-none rotate-[-90deg] absolute top-0 right-[11.3em] order-1">
+                        <img src="../../../public/arrow_icon_two.png" alt="" class="z-50 w-8 pointer-events-none rotate-[-90deg] absolute top-0 right-[12.3em] order-1">
                       </div>
                       <div class="order-2 button_over cursor-pointer">
                         <label for="AboutMe py-2" class="">
@@ -408,7 +408,7 @@ onMounted(()=>{
                           </router-link>
                         </label>
                       </div>
-                      <div class="absolute pointer-events-none top-0 transform -translate-x-1/2 right-[11.3em] order-1 object_img row_icon animate-color-change">
+                      <div class="absolute pointer-events-none top-0 transform -translate-x-1/2 right-[12.3em] order-1 object_img row_icon animate-color-change">
                         <img src="../../../public/arrow_icon_one.png" alt="" class="z-50 w-8 rotate-[-90deg]">
                       </div>
                     </div>
