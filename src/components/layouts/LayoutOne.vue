@@ -150,8 +150,8 @@ onMounted(()=>{
       
       <div class="flex justify-center items-end text-base">
           <div class="relative px-12">
-              <ul class="flex uppercase space-x-6">
-                <li class="h-11">
+              <ul class="flex uppercase space-x-6 flex-1">
+                <li>
                   <template v-if="route.path === '/'">
                     <!-- <label for="AboutMe">
                       <router-link :to="{name: 'AboutMe'}" v-slot="{ href, navigate }" class="">
@@ -162,14 +162,20 @@ onMounted(()=>{
                     </label> -->
                     <div class="flex flex-row items-center">
                       <div class="">
-                        <img src="../../../public/arrow_icon_two.png" alt="" class="w-8 rotate-[-90deg] absolute top-0 left-3 order-1">
+                        <img src="../../../public/arrow_icon_two.png" alt="" class="w-8 pointer-events-none rotate-[-90deg] absolute top-0 left-3 order-1">
                       </div>
                       <div class="order-2 button_over cursor-pointer">
                         <label for="AboutMe py-2" class="">
                           <router-link :to="{name: 'AboutMe'}" v-slot="{ href, navigate }" class="">
                             <button :href="href" @click="navigate" @mouseover="show = true" @mouseleave="show = false" 
-                              class="boton-cambio-color uppercase px-2 pt-1 pb-4 w-32 transition-all duration-300 bg-secundary-buttonlagout text-primary-default hover:bg-primary-buttonlagout hover:text-secundary-buttonlagout">
-                              About Me
+                              class="relative group boton-cambio-color uppercase items-center text-left px-2 pt-1 pb-4 w-36 transition-all duration-300 bg-secundary-buttonlagout text-primary-default hover:bg-primary-buttonlagout hover:text-secundary-buttonlagout">
+                              
+                              <div class="absolute text-primary-buttonText bg-primary-default w-5 h-5 items-center top-[0.40rem]">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-5">
+                                  <path fill-rule="evenodd" d="M7.5 6a4.5 4.5 0 1 1 9 0 4.5 4.5 0 0 1-9 0ZM3.751 20.105a8.25 8.25 0 0 1 16.498 0 .75.75 0 0 1-.437.695A18.683 18.683 0 0 1 12 22.5c-2.786 0-5.433-.608-7.812-1.7a.75.75 0 0 1-.437-.695Z" clip-rule="evenodd" />
+                                </svg>
+                              </div>
+                              <span class="ml-6 ">About Me</span>
                             </button>
                           </router-link>
                         </label>
@@ -188,14 +194,20 @@ onMounted(()=>{
                         <label for="AboutMe" class="hover:border-y-2 py-2 border-secundary-buttonDefoult">
                           <router-link :to="{name: 'AboutMe'}" @mouseover="setHovered(true)"  v-slot="{ href, navigate }" :key="index" :class="{ active: index === countKeyButton }">
                             <button :href="href" @click="navigate" @mouseleave="show = false" value="1" 
-                              class="relative inline-block overflow-hidden uppercase px-2 py-1 w-32 bg-primary-butonBack p-2 btn-ola hover:text-primary-default transition-colors cursor-pointer">
-                              <span>About Me</span>
+                              class="relative group inline-block px-2 overflow-hidden uppercase items-center text-left w-36 h-8 text-primary-buttonText bg-primary-butonBack  btn-ola hover:text-primary-default transition-colors cursor-pointer">
+                                
+                              <div class="absolute text-primary-default group-hover:text-primary-buttonText bg-primary-buttonText  group-hover:bg-primary-default w-5 h-5 items-center top-[0.40rem]">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-5">
+                                  <path fill-rule="evenodd" d="M7.5 6a4.5 4.5 0 1 1 9 0 4.5 4.5 0 0 1-9 0ZM3.751 20.105a8.25 8.25 0 0 1 16.498 0 .75.75 0 0 1-.437.695A18.683 18.683 0 0 1 12 22.5c-2.786 0-5.433-.608-7.812-1.7a.75.75 0 0 1-.437-.695Z" clip-rule="evenodd" />
+                                </svg>
+                              </div>
+                              <span class="ml-6 ">About Me</span>
                             </button>
                           </router-link>
                         </label>
                       </div>
-                      <div class="absolute top-0 transform -translate-x-1/2 left-3 image-render-auto order-1 object_img animate-color-change text-primary-default">
-                        <img src="../../../public/arrow_icon_one.svg" alt="" class="z-50 w-8 rotate-[-90deg] text-primary-default">
+                      <div class="absolute pointer-events-none top-0 transform -translate-x-1/2 left-3 image-render-auto order-1 object_img animate-color-change text-primary-default">
+                        <img src="../../../public/arrow_icon_one.png" alt="" class="z-50 w-8 rotate-[-90deg] text-primary-default">
                       </div>
                     </div>
                   </template>
@@ -204,14 +216,21 @@ onMounted(()=>{
                   <template v-if="route.path === '/skills/'">
                     <div class="flex flex-row items-center">
                       <div class="">
-                        <img src="../../../public/arrow_icon_two.png" alt="" class="w-8 rotate-[-90deg] absolute top-0 left-[10.2em] order-1">
+                        <img src="../../../public/arrow_icon_two.png" alt="" class="w-8 pointer-events-none rotate-[-90deg] absolute top-0 left-[10.2em] order-1">
                       </div>
                       <div class="order-2 button_over cursor-pointer">
                         <label for="Skill" class="">
                           <router-link :to="{name: 'Skill'}" v-slot="{ href, navigate }" class="">
                             <button :href="href" @click="navigate" @mouseover="show = true" @mouseleave="show = false" 
-                              class="boton-cambio-color uppercase px-2 pt-1 pb-4 w-32 transition-all duration-300 bg-secundary-buttonlagout text-primary-default hover:bg-primary-buttonlagout hover:text-secundary-buttonlagout">
-                              Skills
+                            class="relative group boton-cambio-color uppercase items-center text-left px-2 pt-1 pb-4 w-36 transition-all duration-300 bg-secundary-buttonlagout text-primary-default hover:bg-primary-buttonlagout hover:text-secundary-buttonlagout">
+                              
+                            <div class="absolute text-primary-buttonText bg-primary-default w-5 h-5 items-center top-[0.40rem]">
+                              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-5">
+                                <path fill-rule="evenodd" d="M14.615 1.595a.75.75 0 0 1 .359.852L12.982 9.75h7.268a.75.75 0 0 1 .548 1.262l-10.5 11.25a.75.75 0 0 1-1.272-.71l1.992-7.302H3.75a.75.75 0 0 1-.548-1.262l10.5-11.25a.75.75 0 0 1 .913-.143Z" clip-rule="evenodd" />
+                              </svg>
+                              
+                            </div>
+                            <span class="ml-6 ">Skills</span>
                             </button>
                           </router-link>
                         </label>
@@ -222,34 +241,46 @@ onMounted(()=>{
                     <div class="flex flex-row items-center">
                       <div class="order-2 button_over cursor-pointer">
                         <label for="Skill" class="hover:border-y-2 py-2 border-secundary-buttonDefoult">
-                          <router-link :to="{name: 'Skill'}" v-slot="{ href, navigate }" @mouseover="setHovered(true)"
-                          @mouseleave="setHovered(false)"  class="">
+                          <router-link :to="{name: 'Skill'}" v-slot="{ href, navigate }" class="">
+                            <!-- <router-link :to="{name: 'Skill'}" v-slot="{ href, navigate }" @mouseover="setHovered(true)"
+                          @mouseleave="setHovered(false)"  class=""> -->
                             <button :href="href" @click="navigate" @mouseover="show = true" @mouseleave="show = false" value="3"
-                              class="relative inline-block overflow-hidden uppercase px-2 py-1 w-32 bg-primary-butonBack p-2 btn-ola hover:text-primary-default transition-colors cursor-pointer">
-                              <span>Skills</span>
+                              class="relative group inline-block px-2 overflow-hidden uppercase items-center text-left w-36 h-8 text-primary-buttonText bg-primary-butonBack  btn-ola hover:text-primary-default transition-colors cursor-pointer">
+                              
+                              <div class="absolute text-primary-default group-hover:text-primary-buttonText bg-primary-buttonText  group-hover:bg-primary-default w-5 h-5 items-center top-[0.40rem]">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-5">
+                                  <path fill-rule="evenodd" d="M14.615 1.595a.75.75 0 0 1 .359.852L12.982 9.75h7.268a.75.75 0 0 1 .548 1.262l-10.5 11.25a.75.75 0 0 1-1.272-.71l1.992-7.302H3.75a.75.75 0 0 1-.548-1.262l10.5-11.25a.75.75 0 0 1 .913-.143Z" clip-rule="evenodd" />
+                                </svg>
+                              </div>
+                              <span class="ml-6 ">Skills</span>
                             </button>
                           </router-link>
                         </label>
                       </div>
-                      <div class="inline-block absolute top-0 transform -translate-x-1/2 left-[10.2em] order-1 object_img animate-color-change">
+                      <div class="inline-block absolute pointer-events-none top-0 transform -translate-x-1/2 left-[10.2em] order-1 object_img animate-color-change">
                         <img src="../../../public/arrow_icon_one.png" alt="" class="w-8 rotate-[-90deg]">
                       </div>
                     </div>
                   </template>
                 </li>
-                <li class="h-11">
+                <li>
                   <template v-if="route.path === '/projects/'">
                     <div class="flex flex-row items-center">
                       <div class="">
-                        <img src="../../../public/arrow_icon_two.png" alt="" class="w-8 rotate-[-90deg] absolute top-0 left-[19.7em] order-1">
+                        <img src="../../../public/arrow_icon_two.png" alt="" class="w-8 pointer-events-none rotate-[-90deg] absolute top-0 left-[19.7em] order-1">
                       </div>
                       <div class="order-2 button_over cursor-pointer">
                         <label for="AboutMe py-2" class="">
                           <router-link :to="{name: 'Project'}" v-slot="{ href, navigate }" class="">
-                            <button :href="href" @click="navigate" @mouseover="show = true" @mouseleave="show = false" class="boton-cambio-color uppercase px-2 pt-1 pb-4 w-32 transition-all duration-300 bg-secundary-buttonlagout text-primary-default hover:bg-primary-buttonlagout hover:text-secundary-buttonlagout">
-                              <span>
-                                Projects
-                              </span>
+                            <button :href="href" @click="navigate" @mouseover="show = true" @mouseleave="show = false" 
+                              class="relative group boton-cambio-color uppercase items-center text-left px-2 pt-1 pb-4 w-36 transition-all duration-300 bg-secundary-buttonlagout text-primary-default hover:bg-primary-buttonlagout hover:text-secundary-buttonlagout">
+                              
+                              <div class="absolute text-primary-buttonText bg-primary-default w-5 h-5 items-center top-[0.40rem]">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-5">
+                                  <path fill-rule="evenodd" d="M6.32 2.577a49.255 49.255 0 0 1 11.36 0c1.497.174 2.57 1.46 2.57 2.93V21a.75.75 0 0 1-1.085.67L12 18.089l-7.165 3.583A.75.75 0 0 1 3.75 21V5.507c0-1.47 1.073-2.756 2.57-2.93Z" clip-rule="evenodd" />
+                                </svg>
+                              </div>
+                              <span class="ml-6 ">Projects</span>
                             </button>
                           </router-link>
                         </label>
@@ -262,13 +293,20 @@ onMounted(()=>{
                         <label for="AboutMe" class="hover:border-y-2 py-2 border-secundary-buttonDefoult">
                           <router-link :to="{name: 'Project'}" v-slot="{ href, navigate }" class="">
                             <button :href="href" @click="navigate" @mouseover="show = true" @mouseleave="show = false" value="2"
-                              class=" relative inline-block overflow-hidden uppercase px-2 py-1 w-32 bg-primary-butonBack p-2 btn-ola hover:text-primary-default transition-colors cursor-pointer">
-                              <span>Projects</span>
+                              class="relative group inline-block px-2 overflow-hidden uppercase items-center text-left w-36 h-8 text-primary-buttonText bg-primary-butonBack  btn-ola hover:text-primary-default transition-colors cursor-pointer">
+                                
+                              <div class="absolute text-primary-default group-hover:text-primary-buttonText bg-primary-buttonText  group-hover:bg-primary-default w-5 h-5 items-center top-[0.40rem]">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-5">
+                                  <path fill-rule="evenodd" d="M6.32 2.577a49.255 49.255 0 0 1 11.36 0c1.497.174 2.57 1.46 2.57 2.93V21a.75.75 0 0 1-1.085.67L12 18.089l-7.165 3.583A.75.75 0 0 1 3.75 21V5.507c0-1.47 1.073-2.756 2.57-2.93Z" clip-rule="evenodd" />
+                                </svg>
+                                
+                              </div>
+                              <span class="ml-6 ">Projects</span>
                             </button>
                           </router-link>
                         </label>
                       </div>
-                      <div class="absolute top-0 transform -translate-x-1/2 left-[19.7em] order-1 object_img animate-color-change">
+                      <div class="absolute pointer-events-none top-0 transform -translate-x-1/2 left-[19.7em] order-1 object_img animate-color-change">
                         <img src="../../../public/arrow_icon_one.png" alt="" class="w-8 rotate-[-90deg]">
                       </div>
                     </div>
@@ -278,13 +316,22 @@ onMounted(()=>{
                   <template v-if="route.path === '/certificates/'">
                     <div class="flex flex-row items-center">
                       <div class="">
-                        <img src="../../../public/arrow_icon_two.png" alt="" class="w-8 rotate-[-90deg] absolute top-0 right-[20.7em] order-1">
+                        <img src="../../../public/arrow_icon_two.png" alt="" class="w-8 pointer-events-none rotate-[-90deg] absolute top-0 right-[20.7em] order-1">
                       </div>
                       <div class="order-2 button_over cursor-pointer">
-                        <label for="Certificate" class="">
+                        <label for="Studie" class="">
                           <router-link :to="{name: 'Certificate'}" v-slot="{ href, navigate }" class="">
-                            <button :href="href" @click="navigate" @mouseover="show = true" @mouseleave="show = false" class="boton-cambio-color uppercase px-2 pt-1 pb-4 w-32 transition-all duration-300 bg-secundary-buttonlagout text-primary-default hover:bg-primary-buttonlagout hover:text-secundary-buttonlagout">
-                              Certificates
+                            <button :href="href" @click="navigate" @mouseover="show = true" @mouseleave="show = false" 
+                            class="relative group boton-cambio-color uppercase items-center text-left px-2 pt-1 pb-4 w-36 transition-all duration-300 bg-secundary-buttonlagout text-primary-default hover:bg-primary-buttonlagout hover:text-secundary-buttonlagout">
+                              
+                            <div class="absolute text-primary-buttonText bg-primary-default w-5 h-5 items-center top-[0.40rem]">
+                              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-5">
+                                <path d="M11.7 2.805a.75.75 0 0 1 .6 0A60.65 60.65 0 0 1 22.83 8.72a.75.75 0 0 1-.231 1.337 49.948 49.948 0 0 0-9.902 3.912l-.003.002c-.114.06-.227.119-.34.18a.75.75 0 0 1-.707 0A50.88 50.88 0 0 0 7.5 12.173v-.224c0-.131.067-.248.172-.311a54.615 54.615 0 0 1 4.653-2.52.75.75 0 0 0-.65-1.352 56.123 56.123 0 0 0-4.78 2.589 1.858 1.858 0 0 0-.859 1.228 49.803 49.803 0 0 0-4.634-1.527.75.75 0 0 1-.231-1.337A60.653 60.653 0 0 1 11.7 2.805Z" />
+                                <path d="M13.06 15.473a48.45 48.45 0 0 1 7.666-3.282c.134 1.414.22 2.843.255 4.284a.75.75 0 0 1-.46.711 47.87 47.87 0 0 0-8.105 4.342.75.75 0 0 1-.832 0 47.87 47.87 0 0 0-8.104-4.342.75.75 0 0 1-.461-.71c.035-1.442.121-2.87.255-4.286.921.304 1.83.634 2.726.99v1.27a1.5 1.5 0 0 0-.14 2.508c-.09.38-.222.753-.397 1.11.452.213.901.434 1.346.66a6.727 6.727 0 0 0 .551-1.607 1.5 1.5 0 0 0 .14-2.67v-.645a48.549 48.549 0 0 1 3.44 1.667 2.25 2.25 0 0 0 2.12 0Z" />
+                                <path d="M4.462 19.462c.42-.419.753-.89 1-1.395.453.214.902.435 1.347.662a6.742 6.742 0 0 1-1.286 1.794.75.75 0 0 1-1.06-1.06Z" />
+                              </svg>
+                            </div>
+                            <span class="ml-6 ">Studies</span>
                             </button>
                           </router-link>
                         </label>
@@ -293,17 +340,25 @@ onMounted(()=>{
                   </template>
                   <template v-else>
                     <div class="flex flex-row items-center">
-                      <div class="order-2 button_over cursor-pointer">
-                        <label for="Certificate" class="hover:border-y-2 py-2 border-secundary-buttonDefoult">
-                          <router-link :to="{name: 'Certificate'}" v-slot="{ href, navigate }" class="">
+                      <div class="order-2 button_over cursor-pointer items-center">
+                        <label for="Studie" class="hover:border-y-2 py-2 border-secundary-buttonDefoult flex-1">
+                          <router-link :to="{name: 'Certificate'}" v-slot="{ href, navigate }" class="items-center h-full">
                             <button :href="href" @click="navigate" @mouseover="show = true" @mouseleave="show = false" value="4"
-                              class=" relative inline-block overflow-hidden uppercase px-2 py-1 w-32 bg-primary-butonBack p-2 btn-ola hover:text-primary-default transition-colors cursor-pointer">
-                              <span>Certificates</span>
+                              class="relative group inline-block px-2 overflow-hidden uppercase items-center text-left w-36 h-8 text-primary-buttonText bg-primary-butonBack  btn-ola hover:text-primary-default transition-colors cursor-pointer">
+                              
+                              <div class="absolute text-primary-default group-hover:text-primary-buttonText bg-primary-buttonText  group-hover:bg-primary-default w-5 h-5 items-center top-[0.40rem]">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-5">
+                                  <path d="M11.7 2.805a.75.75 0 0 1 .6 0A60.65 60.65 0 0 1 22.83 8.72a.75.75 0 0 1-.231 1.337 49.948 49.948 0 0 0-9.902 3.912l-.003.002c-.114.06-.227.119-.34.18a.75.75 0 0 1-.707 0A50.88 50.88 0 0 0 7.5 12.173v-.224c0-.131.067-.248.172-.311a54.615 54.615 0 0 1 4.653-2.52.75.75 0 0 0-.65-1.352 56.123 56.123 0 0 0-4.78 2.589 1.858 1.858 0 0 0-.859 1.228 49.803 49.803 0 0 0-4.634-1.527.75.75 0 0 1-.231-1.337A60.653 60.653 0 0 1 11.7 2.805Z" />
+                                  <path d="M13.06 15.473a48.45 48.45 0 0 1 7.666-3.282c.134 1.414.22 2.843.255 4.284a.75.75 0 0 1-.46.711 47.87 47.87 0 0 0-8.105 4.342.75.75 0 0 1-.832 0 47.87 47.87 0 0 0-8.104-4.342.75.75 0 0 1-.461-.71c.035-1.442.121-2.87.255-4.286.921.304 1.83.634 2.726.99v1.27a1.5 1.5 0 0 0-.14 2.508c-.09.38-.222.753-.397 1.11.452.213.901.434 1.346.66a6.727 6.727 0 0 0 .551-1.607 1.5 1.5 0 0 0 .14-2.67v-.645a48.549 48.549 0 0 1 3.44 1.667 2.25 2.25 0 0 0 2.12 0Z" />
+                                  <path d="M4.462 19.462c.42-.419.753-.89 1-1.395.453.214.902.435 1.347.662a6.742 6.742 0 0 1-1.286 1.794.75.75 0 0 1-1.06-1.06Z" />
+                                </svg>
+                              </div>
+                              <span class="ml-6 ">Studies</span>
                             </button>
                           </router-link>
                         </label>
                       </div>
-                      <div class="absolute top-0 transform -translate-x-1/2 right-[20.7em] order-1 object_img animate-color-change">
+                      <div class="absolute pointer-events-none top-0 transform -translate-x-1/2 right-[22.7em] order-1 object_img animate-color-change">
                         <img src="../../../public/arrow_icon_one.png" alt="" class="w-8 rotate-[-90deg]">
                       </div>
                     </div>
@@ -313,13 +368,21 @@ onMounted(()=>{
                   <template v-if="route.path === '/media/'">
                     <div class="flex flex-row items-center">
                       <div class="">
-                        <img src="../../../public/arrow_icon_two.png" alt="" class="z-50 w-8 rotate-[-90deg] absolute top-0 right-[11.3em] order-1">
+                        <img src="../../../public/arrow_icon_two.png" alt="" class="z-50 w-8 pointer-events-none rotate-[-90deg] absolute top-0 right-[11.3em] order-1">
                       </div>
                       <div class="order-2 button_over cursor-pointer">
                         <label for="AboutMe py-2" class="">
                           <router-link :to="{name: 'Media'}" v-slot="{ href, navigate }" class="">
-                            <button :href="href" @click="navigate" @mouseover="show = true" @mouseleave="show = false" class="boton-cambio-color uppercase px-2 pt-1 pb-4 w-32 transition-all duration-300 bg-secundary-buttonlagout text-primary-default hover:bg-primary-buttonlagout hover:text-secundary-buttonlagout">
-                              Media
+                            <button :href="href" @click="navigate" @mouseover="show = true" @mouseleave="show = false" 
+                              class="relative group boton-cambio-color uppercase items-center text-left px-2 pt-1 pb-4 w-36 transition-all duration-300 bg-secundary-buttonlagout text-primary-default hover:bg-primary-buttonlagout hover:text-secundary-buttonlagout">
+                                
+                              <div class="absolute text-primary-buttonText bg-primary-default w-5 h-5 items-center top-[0.40rem]">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-5">
+                                  <path d="M12 9a3.75 3.75 0 1 0 0 7.5A3.75 3.75 0 0 0 12 9Z" />
+                                  <path fill-rule="evenodd" d="M9.344 3.071a49.52 49.52 0 0 1 5.312 0c.967.052 1.83.585 2.332 1.39l.821 1.317c.24.383.645.643 1.11.71.386.054.77.113 1.152.177 1.432.239 2.429 1.493 2.429 2.909V18a3 3 0 0 1-3 3h-15a3 3 0 0 1-3-3V9.574c0-1.416.997-2.67 2.429-2.909.382-.064.766-.123 1.151-.178a1.56 1.56 0 0 0 1.11-.71l.822-1.315a2.942 2.942 0 0 1 2.332-1.39ZM6.75 12.75a5.25 5.25 0 1 1 10.5 0 5.25 5.25 0 0 1-10.5 0Zm12-1.5a.75.75 0 1 0 0-1.5.75.75 0 0 0 0 1.5Z" clip-rule="evenodd" />
+                                </svg>
+                              </div>
+                              <span class="ml-6 ">Media</span>
                             </button>
                           </router-link>
                         </label>
@@ -329,16 +392,23 @@ onMounted(()=>{
                   <template v-else>
                     <div class="flex flex-row items-center">
                       <div class="order-2 button_over cursor-pointer">
-                        <label for="AboutMe" class="hover:border-y-2 py-2 border-secundary-buttonDefoult">
+                        <label for="Media" class="hover:border-y-2 py-2 border-secundary-buttonDefoult">
                           <router-link :to="{name: 'Media'}" v-slot="{ href, navigate }" class="">
                             <button :href="href" @click="navigate" @mouseover="show = true" @mouseleave="show = false"
-                              class="relative inline-block overflow-hidden uppercase px-2 py-1 w-32 text-primary-buttonText hover:text-primary-default bg-primary-butonBack p-2  btn-ola  transition-colors cursor-pointer">
-                              <span>Media</span>
+                              class="relative group inline-block px-2 overflow-hidden uppercase items-center text-left w-36 h-8 text-primary-buttonText bg-primary-butonBack  btn-ola hover:text-primary-default transition-colors cursor-pointer">
+                                
+                              <div class="absolute text-primary-default group-hover:text-primary-buttonText bg-primary-buttonText  group-hover:bg-primary-default w-5 h-5 items-center top-[0.40rem]">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-5">
+                                  <path d="M12 9a3.75 3.75 0 1 0 0 7.5A3.75 3.75 0 0 0 12 9Z" />
+                                  <path fill-rule="evenodd" d="M9.344 3.071a49.52 49.52 0 0 1 5.312 0c.967.052 1.83.585 2.332 1.39l.821 1.317c.24.383.645.643 1.11.71.386.054.77.113 1.152.177 1.432.239 2.429 1.493 2.429 2.909V18a3 3 0 0 1-3 3h-15a3 3 0 0 1-3-3V9.574c0-1.416.997-2.67 2.429-2.909.382-.064.766-.123 1.151-.178a1.56 1.56 0 0 0 1.11-.71l.822-1.315a2.942 2.942 0 0 1 2.332-1.39ZM6.75 12.75a5.25 5.25 0 1 1 10.5 0 5.25 5.25 0 0 1-10.5 0Zm12-1.5a.75.75 0 1 0 0-1.5.75.75 0 0 0 0 1.5Z" clip-rule="evenodd" />
+                                </svg>
+                              </div>
+                              <span class="ml-6 ">Media</span>
                             </button>
                           </router-link>
                         </label>
                       </div>
-                      <div class="absolute top-0 transform -translate-x-1/2 right-[11.3em] order-1 object_img row_icon animate-color-change">
+                      <div class="absolute pointer-events-none top-0 transform -translate-x-1/2 right-[11.3em] order-1 object_img row_icon animate-color-change">
                         <img src="../../../public/arrow_icon_one.png" alt="" class="z-50 w-8 rotate-[-90deg]">
                       </div>
                     </div>
@@ -376,14 +446,16 @@ onMounted(()=>{
     <div class="flex flex-row mx-12 justify-center">
       <template v-for="n in gridItems" :key="n">
         <div class="w-14 h-10">
-          <div class="w-full grid grid-cols-3 grid-rows-1">
+          <div class="w-full grid grid-cols-2 grid-rows-1">
             <div class="w-full col-start-1 col-end-2 flex justify-start">
               <div class="w-[0.50rem] h-[0.2rem] bg-secundary-buttonlagout"></div> 
             </div>
           </div>
-          <div class="w-full h-4 grid grid-cols-3 grid-rows-2">
-            <div class="w-full col-start-2 col-end-2 flex justify-between">
+          <div class="w-full ml-[0.25rem] h-4 grid grid-cols-3 grid-rows-2">
+            <div class="w-full col-start-1 col-end-2 flex justify-end">
               <div class="w-[0.25rem] h-[0.25rem] rounded-full bg-secundary-buttonlagout"></div>
+            </div>
+            <div class="w-full col-start-3 col-end-3 flex justify-start">
               <div class="w-[0.25rem] h-[0.25rem] rounded-full bg-secundary-buttonlagout"></div>
             </div>
             <div class="w-full col-start-2 col-end-2 flex justify-center">

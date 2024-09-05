@@ -33,5 +33,12 @@ export default {
       'body': ['"Open Sans"'],
     },
   },
+  variants:{
+    extend:{
+      textColor: ['hover'],
+      fill: ['hover'],
+      backgroundColor: ['hover']
+    },
+  },
   plugins: [],
 }

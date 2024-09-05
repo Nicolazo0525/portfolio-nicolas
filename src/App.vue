@@ -19,8 +19,11 @@ provide('isHovered', isHovered)
 </script>
 
 <template>
-  <main class="relative inset-0  bg-[radial-gradient(ellipse_at_center,_#d6ceb6_0%,#797767_290%)]">
+  <main class="relative inset-0  bg-[radial-gradient(ellipse_at_center,_#d6ceb6_0%,#797767_290%)] ">
     <!-- <mesh-grid/> -->
+    <div class="z-50 absolute pixelated-screen pointer-events-none">
+      
+    </div>
     <!--  <hr class="absolute left-0 z-10 border-one w-60 rotate-45 border-primary-buttonText"> -->
     <div class="fixed m-0 z-10 top-0 left-0 border-b border-secundary-guionColor w-full transform rotate-45 origin-bottom-left"></div>
     <div class="fixed m-0 z-10 top-12 left-0 border-b border-secundary-guionColor w-full transform rotate-45 origin-bottom-left"></div>
@@ -51,6 +54,15 @@ provide('isHovered', isHovered)
 </template>
 
 <style>
+
+.pixelated-screen {
+  width: 100%;
+  height: 100vh;
+  background: url('../public/grid-line-front-mini.png') repeat;
+  background-size: 70%; /* Ajusta el tamaño del grid según tus necesidades */
+  z-index: 60;
+  image-rendering: pixelated;
+}
 
 .border-one{
   border-width: 0.1px;
