@@ -191,7 +191,7 @@ function setHovered(value) {
                       
                       <div class="order-2 button_over cursor-pointer">
                         <label for="AboutMe" class="hover:border-y-2 py-2 border-secundary-buttonDefoult">
-                          <router-link :to="{name: 'AboutMe'}" @mouseover="setHovered(true)" v-slot="{ href, navigate }" :key="index" :class="{ active: index === countKeyButton }">
+                          <router-link :to="{name: 'AboutMe'}" v-slot="{ href, navigate }" :key="index" :class="{ active: index === countKeyButton }">
                             <button :href="href" @click="navigate" @mouseleave="show = false" value="1" 
                               class="relative group inline-block px-2 overflow-hidden uppercase items-center text-left w-36 h-8 text-primary-buttonText bg-primary-butonBack  btn-ola hover:text-primary-default transition-colors cursor-pointer">
                                 
@@ -219,7 +219,7 @@ function setHovered(value) {
                       </div>
                       <div class="order-2 button_over cursor-pointer">
                         <label for="Skill" class="">
-                          <router-link :to="{name: 'Skill'}" v-slot="{ href, navigate }" @mouseover="setHovered(true)" @mouseleave="setHovered(false)">
+                          <router-link :to="{name: 'Skill'}" v-slot="{ href, navigate }">
                             <button :href="href" @click="navigate" @mouseover="show = true" @mouseleave="show = false" 
                             class="relative group boton-cambio-color uppercase items-center text-left px-2 pt-1 pb-4 w-36 transition-all duration-300 bg-secundary-buttonlagout text-primary-default hover:bg-primary-buttonlagout hover:text-secundary-buttonlagout">
                               
@@ -241,8 +241,8 @@ function setHovered(value) {
                       <div class="order-2 button_over cursor-pointer">
                         <label for="Skill" class="hover:border-y-2 py-2 border-secundary-buttonDefoult">
                           <!-- <router-link :to="{name: 'Skill'}" v-slot="{ href, navigate }" class=""> -->
-                          <router-link :to="{name: 'Skill'}" v-slot="{ href, navigate }" @mouseover="setHovered(true), navigateToRoute('Skill')"
-                            @mouseleave="setHovered(false)"  class="">
+                            <!-- @mouseover="navigateToRoute('Skill')" -->
+                          <router-link :to="{name: 'Skill'}" v-slot="{ href, navigate }" class="">
                             <button :href="href" @click="navigate" @mouseover="show = true" @mouseleave="show = false" value="3"
                               class="relative group inline-block px-2 overflow-hidden uppercase items-center text-left w-36 h-8 text-primary-buttonText bg-primary-butonBack  btn-ola hover:text-primary-default transition-colors cursor-pointer">
                               
