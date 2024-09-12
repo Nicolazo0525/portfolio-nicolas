@@ -11,6 +11,7 @@
     "deploy": "gh-pages -d dist"
   },
   "dependencies": {
+    "@twemoji/api": "^15.1.0",
     "axios": "^1.7.3",
     "pinia": "^2.2.0",
     "vue": "^3.4.29",

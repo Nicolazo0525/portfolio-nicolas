@@ -42,11 +42,11 @@ provide('isHovered', isHovered)
     <div class="z-50 w-full absolute">
       <layout/>
     </div>
-    <div class="z-40 flex flex-grow h-screen pt-20">
-      <div class="left-0 w-3/12">
+    <div class="z-40 relative flex flex-grow h-screen pt-20">
+      <div class="absolute left-0 w-3/12">
         <layout-left/>
       </div>
-      <div class="right-0 w-9/12">
+      <div class="h-full w-full items-center"><!-- left-[19.1rem] -->
         <router-view/>
       </div>
     </div>

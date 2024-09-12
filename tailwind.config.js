@@ -21,6 +21,7 @@ export default {
           buttonlagout: '#716858',
           buttonDefoult: '#49483d',
           guionColor: '#b1ab96',
+          boxColor: '#69695f',
         },
         
       },

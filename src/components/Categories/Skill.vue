@@ -1,18 +1,12 @@
 <script setup>
-import { inject } from "vue";
+import { ref, onMounted, inject } from "vue";
 
 const isHovered = inject('isHovered')
+
+console.log(isHovered)
 </script>
 <template>
-  <!-- <div class=" flex justify-center items-center h-[100vh] bg-black m-0">
-    <div class="grid-continer w-full">
-      <div class="grid-item"></div>
-      <div class="grid-item"></div>
-      <div class="grid-item"></div>
-    
-    </div>
-  </div> -->
-  <div class="order-2 button_over cursor-pointer pt-12">
+  <!-- <div class="order-2 button_over cursor-pointer pt-12">
     <label for="ButtonTwo" class="hover:border-y-2 py-2 border-secundary-buttonDefoult">
       <button @mouseover="show = true" @mouseleave="show = false" id="2" value="2" name="buttonTwo"
           class="relative inline-block overflow-hidden boton-ola uppercase px-2 py-1 w-32 bg-primary-buttonlagout z-50 p-2  
@@ -25,8 +19,16 @@ const isHovered = inject('isHovered')
     <button class="relative inline-block px-6 py-3 text-white bg-blue-500 border-none cursor-pointer overflow-hidden boton-ola">
       Hover me!
   </button>
+  </div> -->
+  <div class="w-full h-full flex justify-center items-center">
+    <div class="flex flex-col  w-34 h-96 ">
+      <div class="relative flex justify-center w-[8.5rem] h-96 bg-secundary-boxColor">
+        <div class="absolute top-0 m-auto w-[8.5rem] h-10 pb-[0.125rem] bg-orange-400"/>
+        <div class="absolute top-[2.6rem] m-auto w-[8.5rem] h-10 bg-orange-400 transition-all duration-100" :class="{'w-[10rem]': isHovered}"/>
+      </div>
+    </div>
   </div>
-    <!-- <div :class="{ 'hovered-class': isHovered }">
+    <!-- <div :class="{ 'bg-red-600 mx-12': isHovered }">
         Tu contenido aquí 
         <button :class="{ 'active': isHovered }">Botón</button>
     </div> -->
