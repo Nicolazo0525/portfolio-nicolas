@@ -23,8 +23,8 @@ console.log(isHovered)
   <div class="w-full h-full flex justify-center items-center">
     <div class="flex flex-col  w-34 h-96 ">
       <div class="relative flex justify-center w-[8.5rem] h-96 bg-secundary-boxColor">
-        <div class="absolute top-0 m-auto w-[8.5rem] h-10 pb-[0.125rem] bg-orange-400"/>
-        <div class="absolute top-[2.6rem] m-auto w-[8.5rem] h-10 bg-orange-400 transition-all duration-100" :class="{'w-[10rem]': isHovered}"/>
+        <div class="absolute top-0 m-auto w-full h-10 pb-[0.125rem] bg-orange-400"/>
+        <div class="absolute top-[2.6rem] m-auto w-full h-10 bg-orange-400 transition-all duration-100" :class="{'w-[10rem]': isHovered}"/>
       </div>
     </div>
   </div>
