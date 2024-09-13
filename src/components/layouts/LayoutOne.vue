@@ -242,7 +242,7 @@ function setHovered(value) {
                         <label for="Skill" class="hover:border-y-2 py-2 border-secundary-buttonDefoult">
                           <!-- <router-link :to="{name: 'Skill'}" v-slot="{ href, navigate }" class=""> -->
                             <!-- @mouseover="navigateToRoute('Skill')" -->
-                          <router-link :to="{name: 'Skill'}" v-slot="{ href, navigate }" class="">
+                          <router-link :to="{name: 'Skill'}" v-slot="{ href, navigate }" class="" >
                             <button :href="href" @click="navigate" @mouseover="show = true" @mouseleave="show = false" value="3"
                               class="relative group inline-block px-2 overflow-hidden uppercase items-center text-left w-36 h-8 text-primary-buttonText bg-primary-butonBack  btn-ola hover:text-primary-default transition-colors cursor-pointer">
                               

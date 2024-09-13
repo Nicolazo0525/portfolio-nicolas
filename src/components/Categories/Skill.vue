@@ -2,8 +2,9 @@
 import { ref, onMounted, inject } from "vue";
 
 const isHovered = inject('isHovered')
+const isHoveredOption = inject('isHoveredOption')
 
-console.log(isHovered)
+console.log(isHoveredOption,'  ', isHovered)
 </script>
 <template>
   <!-- <div class="order-2 button_over cursor-pointer pt-12">
@@ -23,8 +24,8 @@ console.log(isHovered)
   <div class="w-full h-full flex justify-center items-center">
     <div class="flex flex-col  w-34 h-96 ">
       <div class="relative flex justify-center w-[8.5rem] h-96 bg-secundary-boxColor">
-        <div class="absolute top-0 m-auto w-full h-10 pb-[0.125rem] bg-orange-400"/>
-        <div class="absolute top-[2.6rem] m-auto w-full h-10 bg-orange-400 transition-all duration-100" :class="{'w-[10rem]': isHovered}"/>
+        <div class="absolute top-0 m-auto h-10 pb-[0.125rem] bg-orange-400" :class="isHoveredOption === 1 || isHovered === true ? 'w-40' : 'w-full'"/>
+        <div class="absolute top-[2.6rem] h-10 bg-orange-400 transition-all duration-100" :class="isHoveredOption === 2 || isHovered === true ? 'w-40' : 'w-full'"/><!-- :class="{'efect-color': isHovered}" -->
       </div>
     </div>
   </div>
@@ -34,6 +35,12 @@ console.log(isHovered)
     </div> -->
 </template>
 <style>
+
+.efect-color{
+  width: 10rem;
+  --tw-bg-opacity: 1;
+  background-color: rgb(253 186 116 / var(--tw-bg-opacity));
+}
 
 .boton-ola::before {
   content: '';

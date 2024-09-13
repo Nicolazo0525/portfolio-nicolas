@@ -14,8 +14,11 @@ const changeLayout = () => {
     }
 }
 const isHovered = ref(false)
+const isHoveredOption = ref(0)
 
 provide('isHovered', isHovered)
+
+provide('isHoveredOption', isHoveredOption)
 </script>
 
 <template>
