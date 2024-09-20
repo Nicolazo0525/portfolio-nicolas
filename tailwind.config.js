@@ -12,9 +12,10 @@ export default {
           /* default: '#b6b09b', */
           default: '#bab6a1',
           buttonlagout: '#b6b299',
-          buttonText: '#362c3a',
+          buttonText: '#4F4C43',
           defaultback: '#d6ceb6',
           butonBack: '#b0ab97',
+          bgLayoutLeft: '#D5CFAF',
         },
         secundary: {
           default: '#797767',
@@ -22,8 +23,17 @@ export default {
           buttonDefoult: '#49483d',
           guionColor: '#b1ab96',
           boxColor: '#69695f',
+          boxColorBack: '#929075',
         },
-        
+        boxColor: {
+          One: '#8c8068',
+          two: '#cc846b',
+          three: '#ad9065',
+          four: '#ae9a7d',
+          five: '#dfbf9c',
+          six: '#EBC9A4',
+          seven: '#ffffff'
+        },
       },
     },
     fontFamily: {

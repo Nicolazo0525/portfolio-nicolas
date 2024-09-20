@@ -1,9 +1,11 @@
 <script setup>
 import { provide, ref } from 'vue';
 import Layout from './components/layouts/LayoutOne.vue';
-import LayoutLeft from './components/layouts/LayoutLeft.vue';
+import LayoutSkill from './components/layouts/LayoutSkill.vue';
 import MeshGrid from './components/MeshGrid.vue';
+import { useRoute } from "vue-router";
 
+const route = useRoute()
 const toggleLayout = ref(false)
 
 const changeLayout = () => {
@@ -13,12 +15,20 @@ const changeLayout = () => {
       toggleLayout.value = false
     }
 }
+
+// provide/inject pattern 
+
 const isHovered = ref(false)
 const isHoveredOption = ref(0)
+const isHoveredPrimary = ref(0)
 
 provide('isHovered', isHovered)
 
+// Public Hovered Skills
+
+provide('isHoveredPrimary', isHoveredPrimary)
 provide('isHoveredOption', isHoveredOption)
+
 </script>
 
 <template>
@@ -46,9 +56,11 @@ provide('isHoveredOption', isHoveredOption)
       <layout/>
     </div>
     <div class="z-40 relative flex flex-grow h-screen pt-20">
-      <div class="absolute left-0 w-3/12">
-        <layout-left/>
-      </div>
+      <template v-if="route.path === '/skills/'">
+        <div class="absolute left-0 w-[27rem]">
+          <layout-skill/>
+        </div>
+      </template>
       <div class="h-full w-full items-center"><!-- left-[19.1rem] -->
         <router-view/>
       </div>
@@ -64,6 +76,7 @@ provide('isHoveredOption', isHoveredOption)
   background: url('../public/grid-line-front-mini.png') repeat;
   background-size: 70%; /* Ajusta el tamaño del grid según tus necesidades */
   z-index: 60;
+  filter: brightness(110%);
   image-rendering: pixelated;
 }
 
@@ -73,5 +86,28 @@ provide('isHoveredOption', isHoveredOption)
 
 body {
   font-family: 'Orbitron', sans-serif;
+}
+
+::-webkit-scrollbar {
+  width: 3.5px;
+  height: 3.5px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  /*background: #f1f1f1;*/
+  filter: opacity(0%); 
+  border-radius: 3px;
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #4F4C43;
+  border-radius: 3px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  filter: opacity(0%);
 }
 </style>

@@ -141,10 +141,17 @@ function setHovered(value) {
 <template>
   <nav class="relative">
     <div @keydown="handleKeydown" tabindex="0" class="w-full shadow-md h-[4.3rem] flex border-b-2 border-b-secundary-buttonlagout justify-between px-12 z-40">
-      <div class=" flex items-center ">
-          <router-link :to="{name: 'AboutMe'}" class="text-2xl hover:text-cyan-500 transition-colors cursor-pointer">
+      
+      <div class=" flex flex-row items-center space-x-7">
+        <div class="order-2 flex flex-row space-x-1">
+          <div class="w-[0.7rem] h-10 bg-primary-butonBack"/>
+          <div class="w-[0.2rem] h-10 bg-primary-butonBack"/>
+        </div>
+        <div class="order-2">
+          <router-link :to="{name: 'AboutMe'}" class="order-2 text-2xl hover:text-cyan-500 transition-colors cursor-pointer">
             <img src="../../../public/logo_horizontal_grey.png" class="w-26 h-10" alt="">
           </router-link>
+        </div>
       </div>
       
       <div class="flex justify-center items-end text-base">
