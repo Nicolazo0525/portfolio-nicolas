@@ -11,7 +11,7 @@ function setHoveredOption(data){
 <template>
     <div class="order-1 button_over cursor-pointer">
         <label for="Skill" class="hover:border-y-2 py-2 border-primary-buttonText">
-            <button @mouseover="setHoveredOption(11)" @mouseleave="setHoveredOption(0)"
+            <button @click="setHoveredOption(13)" @mouseover="setHoveredOption(13)" @mouseleave="setHoveredOption(0)" 
                 class="relative group inline-block px-2 overflow-hidden border-l-[4px] border-boxColor-two hover:shadow-sm hover:h-[2.1rem]  hover:shadow-gray-500 items-center text-left w-full h-8 text-primary-buttonText btn-menu hover:text-primary-default transition-colors cursor-pointer">
                 
                 <div class="absolute text-primary-buttonText group-hover:text-primary-default w-5 h-5 items-center top-[0.40rem]">
@@ -21,12 +21,17 @@ function setHoveredOption(data){
                     </svg>
                 </div>
                 <span class="ml-6 ">C#</span>
+                <div class="absolute text-primary-buttonText group-hover:text-primary-default w-5 h-5 items-center top-[0.54rem] left-[3.5rem]">
+                    <svg  xmlns="http://www.w3.org/2000/svg"  width="18"  height="18"  viewBox="0 0 24 24"  fill="currentColor"  class="icon icon-tabler icons-tabler-filled icon-tabler-square-rotated"><path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                        <path d="M9.793 2.893l-6.9 6.9c-1.172 1.171 -1.172 3.243 0 4.414l6.9 6.9c1.171 1.172 3.243 1.172 4.414 0l6.9 -6.9c1.172 -1.171 1.172 -3.243 0 -4.414l-6.9 -6.9c-1.171 -1.172 -3.243 -1.172 -4.414 0z" />
+                    </svg>
+                </div>
             </button>
         </label>
     </div>
     <div class="order-2 button_over cursor-pointer">
         <label for="Skill" class="hover:border-y-2 py-2 border-primary-buttonText">
-            <button @mouseover="setHoveredOption(12)" @mouseleave="setHoveredOption(0)"
+            <button @mouseover="setHoveredOption(14)" @mouseleave="setHoveredOption(0)"
                 class="relative group inline-block px-2 overflow-hidden border-l-[4px] border-boxColor-two hover:shadow-sm hover:h-[2.1rem]  hover:shadow-gray-500 items-center text-left w-full h-8 text-primary-buttonText btn-menu hover:text-primary-default transition-colors cursor-pointer">
                 
                 <div class="absolute text-primary-buttonText group-hover:text-primary-default w-5 h-5 items-center top-[0.40rem]">
@@ -41,7 +46,7 @@ function setHoveredOption(data){
     </div>
     <div class="order-3 button_over cursor-pointer">
         <label for="Skill" class="hover:border-y-2 py-2 border-primary-buttonText">
-            <button @mouseover="setHoveredOption(13)" @mouseleave="setHoveredOption(0)"
+            <button @mouseover="setHoveredOption(15)" @mouseleave="setHoveredOption(0)"
                 class="relative group inline-block px-2 overflow-hidden border-l-[4px] border-boxColor-two hover:shadow-sm hover:h-[2.1rem]  hover:shadow-gray-500 items-center text-left w-full h-8 text-primary-buttonText btn-menu hover:text-primary-default transition-colors cursor-pointer">
                 
                 <div class="absolute text-primary-buttonText group-hover:text-primary-default w-5 h-5 items-center top-[0.40rem]">
@@ -56,7 +61,7 @@ function setHoveredOption(data){
     </div>
     <div class="order-4 button_over cursor-pointer">
         <label for="Skill" class="hover:border-y-2 py-2 border-primary-buttonText">
-            <button @mouseover="setHoveredOption(14)" @mouseleave="setHoveredOption(0)"
+            <button @mouseover="setHoveredOption(16)" @mouseleave="setHoveredOption(0)"
                 class="relative group inline-block px-2 overflow-hidden border-l-[4px] border-boxColor-two hover:shadow-sm hover:h-[2.1rem]  hover:shadow-gray-500 items-center text-left w-full h-8 text-primary-buttonText btn-menu hover:text-primary-default transition-colors cursor-pointer">
                 
                 <div class="absolute text-primary-buttonText group-hover:text-primary-default w-5 h-5 items-center top-[0.40rem]">
@@ -71,7 +76,7 @@ function setHoveredOption(data){
     </div>
     <div class="order-5 button_over cursor-pointer">
         <label for="Skill" class="hover:border-y-2 py-2 border-primary-buttonText">
-            <button @mouseover="setHoveredOption(15)" @mouseleave="setHoveredOption(0)"
+            <button @mouseover="setHoveredOption(17)" @mouseleave="setHoveredOption(0)"
                 class="relative group inline-block px-2 overflow-hidden border-l-[4px] border-boxColor-two hover:shadow-sm hover:h-[2.1rem]  hover:shadow-gray-500 items-center text-left w-full h-8 text-primary-buttonText btn-menu hover:text-primary-default transition-colors cursor-pointer">
                 
                 <div class="absolute text-primary-buttonText group-hover:text-primary-default w-5 h-5 items-center top-[0.40rem]">
@@ -91,7 +96,7 @@ function setHoveredOption(data){
     </div>
     <div class="order-6 button_over cursor-pointer">
         <label for="Skill" class="hover:border-y-2 py-2 border-primary-buttonText">
-            <button @mouseover="setHoveredOption(16)" @mouseleave="setHoveredOption(0)"
+            <button @mouseover="setHoveredOption(18)" @mouseleave="setHoveredOption(0)"
                 class="relative group inline-block px-2 overflow-hidden border-l-[4px] border-boxColor-two hover:shadow-sm hover:h-[2.1rem]  hover:shadow-gray-500 items-center text-left w-full h-8 text-primary-buttonText btn-menu hover:text-primary-default transition-colors cursor-pointer">
                 
                 <div class="absolute text-primary-buttonText group-hover:text-primary-default w-5 h-5 items-center top-[0.40rem]">
@@ -111,7 +116,7 @@ function setHoveredOption(data){
     </div>
     <div class="order-7 button_over cursor-pointer">
         <label for="Skill" class="hover:border-y-2 py-2 border-primary-buttonText">
-            <button @mouseover="setHoveredOption(17)" @mouseleave="setHoveredOption(0)"
+            <button @mouseover="setHoveredOption(19)" @mouseleave="setHoveredOption(0)"
                 class="relative group inline-block px-2 overflow-hidden border-l-[4px] border-boxColor-two hover:shadow-sm hover:h-[2.1rem]  hover:shadow-gray-500 items-center text-left w-full h-8 text-primary-buttonText btn-menu hover:text-primary-default transition-colors cursor-pointer">
                 
                 <div class="absolute text-primary-buttonText group-hover:text-primary-default w-5 h-5 items-center top-[0.40rem]">
@@ -131,7 +136,7 @@ function setHoveredOption(data){
     </div>
     <div class="order-8 button_over cursor-pointer">
         <label for="Skill" class="hover:border-y-2 py-2 border-primary-buttonText">
-            <button @mouseover="setHoveredOption(18)" @mouseleave="setHoveredOption(0)"
+            <button @mouseover="setHoveredOption(20)" @mouseleave="setHoveredOption(0)"
                 class="relative group inline-block px-2 overflow-hidden border-l-[4px] border-boxColor-two hover:shadow-sm hover:h-[2.1rem]  hover:shadow-gray-500 items-center text-left w-full h-8 text-primary-buttonText btn-menu hover:text-primary-default transition-colors cursor-pointer">
                 
                 <div class="absolute text-primary-buttonText group-hover:text-primary-default w-5 h-5 items-center top-[0.40rem]">
@@ -151,7 +156,7 @@ function setHoveredOption(data){
     </div>
     <div class="order-9 button_over cursor-pointer">
         <label for="Skill" class="hover:border-y-2 py-2 border-primary-buttonText">
-            <button @mouseover="setHoveredOption(19)" @mouseleave="setHoveredOption(0)"
+            <button @mouseover="setHoveredOption(21)" @mouseleave="setHoveredOption(0)"
                 class="relative group inline-block px-2 overflow-hidden border-l-[4px] border-boxColor-two hover:shadow-sm hover:h-[2.1rem]  hover:shadow-gray-500 items-center text-left w-full h-8 text-primary-buttonText btn-menu hover:text-primary-default transition-colors cursor-pointer">
                 
                 <div class="absolute text-primary-buttonText group-hover:text-primary-default w-5 h-5 items-center top-[0.40rem]">
@@ -166,7 +171,7 @@ function setHoveredOption(data){
     </div>
     <div class="order-10 button_over cursor-pointer">
         <label for="Skill" class="hover:border-y-2 py-2 border-primary-buttonText">
-            <button @mouseover="setHoveredOption(20)" @mouseleave="setHoveredOption(0)"
+            <button @mouseover="setHoveredOption(22)" @mouseleave="setHoveredOption(0)"
                 class="relative group inline-block px-2 overflow-hidden border-l-[4px] border-boxColor-two hover:shadow-sm hover:h-[2.1rem]  hover:shadow-gray-500 items-center text-left w-full h-8 text-primary-buttonText btn-menu hover:text-primary-default transition-colors cursor-pointer">
                 
                 <div class="absolute text-primary-buttonText group-hover:text-primary-default w-5 h-5 items-center top-[0.40rem]">

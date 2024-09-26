@@ -1,13 +1,15 @@
 <script setup>
-import { provide, inject, ref } from "vue";
-import { useRoute } from "vue-router";
+import { inject, ref, onMounted, onBeforeUnmount } from "vue";
+import { useRoute, useRouter } from "vue-router";
 import SoftSkill from "./SecondOptions/SoftSkill.vue";
 import ProgrammingLanguages from "./SecondOptions/ProgrammingLanguages.vue";
 import StyleSheetLanguages from "./SecondOptions/StyleSheetLanguages.vue";
 import FrameworkFrontend from "./SecondOptions/FrameworkFrontend.vue";
+import FrameworkBackend from "./SecondOptions/FrameworkBackend.vue";
 
 
 const route = useRoute()
+const router = useRouter()
 const isHovered = inject('isHovered')
 // Skills
 const isHoveredPrimary = inject('isHoveredPrimary')
@@ -32,10 +34,30 @@ function setHoveredOption(data){
     isHoveredOption.value = data
 }
 
+// back rout
+
+const handleKeydown = (event) => {
+    if (event.key == 'Escape') {
+        // Retroceder una página
+        buttonOption.value = 0
+        isHoveredOption.value = 0
+        console.log(buttonOption.value)
+    }
+}
+
+// Agrego listener a el evento del teclado
+onMounted(()=>{
+    window.addEventListener('keydown', handleKeydown)
+})
+// Elimino el evento
+onBeforeUnmount(()=>{
+    window.addEventListener('keydown', handleKeydown)
+})
+
 </script>
 
 <template>
-    <main class="h-full items-center">
+    <main class="h-full items-center z-50 absolute  w-[27rem]">
         <!-- Skills layout -->
         <template v-if="route.path === '/skills/'">
             <div class="relative flex flex-col flex-1">
@@ -82,14 +104,14 @@ function setHoveredOption(data){
                             s
                         </div>
                     </div>
-                    <div class="flex flex-row ml-11 mt-20 space-x-7 h-[20rem]">
+                    <div class="flex flex-row ml-12 mt-20 space-x-7 h-[24.5rem]">
                         <div class="order-1 left-0 flex flex-row space-x-1 opacity-0 transform transition-transform duration-500 ease-in-out -translate-x-full animate-slite-vertical">
                             <div class="w-[0.7rem] h-full bg-primary-butonBack"/>
                             <div class="w-[0.2rem] h-full bg-primary-butonBack"/>
                         </div>
                         <div class="relative flex flex-col order-1 w-full">
                             <template v-if="buttonOption === 0">
-                                <div class="flex flex-col w-full h-full space-y-4">
+                                <div class="flex flex-col justify-center w-full h-full gap-[19px]">
                                     <div class="order-1 button_over cursor-pointer">
                                         <label for="Skill" class="hover:border-y-2 py-2 border-primary-buttonText">
                                             <button @click="buttonOptionMenu(1), setHoveredPrimary(0)" @mouseover="setHoveredPrimary(1)" @mouseleave="setHoveredPrimary(0)"
@@ -164,14 +186,27 @@ function setHoveredOption(data){
                                                 <div class="absolute p-1 text-primary-default group-hover:text-primary-buttonText bg-primary-buttonText group-hover:bg-primary-default w-5 h-5 items-center top-[0.40rem]">
                                                     <div class="triangle-six w-5 h-5"></div>
                                                 </div>
-                                                <span class="ml-6 ">Databases</span>
+                                                <span class="ml-6 ">Relational databases</span>
                                             </button>
                                         </label>
                                     </div>
                                     <div class="order-1 button_over cursor-pointer">
                                         <label for="Skill" class="hover:border-y-2 py-2 border-primary-buttonText">
-                                            <button @click="buttonOptionMenu(7), setHoveredPrimary(0)" @mouseover="setHoveredPrimary(7)" @mouseleave="setHoveredPrimary(0)"
+                                            <button @click="buttonOptionMenu(7), setHoveredPrimary(0)" @mouseover="setHoveredPrimary(6)" @mouseleave="setHoveredPrimary(0)"
                                                 class="transform transition-transform duration-500 ease-in-out -translate-x-full animate-slide-in-seven
+                                                        relative group inline-block px-2 overflow-hidden w-full hover:shadow-sm hover:h-[2.1rem]  hover:shadow-gray-500 items-center text-left h-8 text-primary-buttonText bg-primary-butonBack btn-menu hover:text-primary-default cursor-pointer">
+                                                
+                                                <div class="absolute p-1 text-primary-default group-hover:text-primary-buttonText bg-primary-buttonText group-hover:bg-primary-default w-5 h-5 items-center top-[0.40rem]">
+                                                    <div class="triangle-six w-5 h-5"></div>
+                                                </div>
+                                                <span class="ml-6 ">Non-relational databases</span>
+                                            </button>
+                                        </label>
+                                    </div>
+                                    <div class="order-1 button_over cursor-pointer">
+                                        <label for="Skill" class="hover:border-y-2 py-2 border-primary-buttonText">
+                                            <button @click="buttonOptionMenu(8), setHoveredPrimary(0)" @mouseover="setHoveredPrimary(7)" @mouseleave="setHoveredPrimary(0)"
+                                                class="transform transition-transform duration-500 ease-in-out -translate-x-full animate-slide-in-eight
                                                         relative group inline-block px-2 overflow-hidden w-full hover:shadow-sm hover:h-[2.1rem]  hover:shadow-gray-500 items-center text-left h-8 text-primary-buttonText bg-primary-butonBack btn-menu hover:text-primary-default cursor-pointer">
                                                 
                                                 <div class="absolute p-1 text-primary-default group-hover:text-primary-buttonText bg-primary-buttonText group-hover:bg-primary-default w-5 h-5 items-center top-[0.40rem]">
@@ -185,7 +220,7 @@ function setHoveredOption(data){
                             </template>
                             <!-- Second menu -->
                             <template v-if="buttonOption != 0">
-                                <div class="absolute top-0 left-0 z-20 flex flex-col bg-primary-bgLayoutLeft w-[21.1rem] h-full py-2 pr-3">
+                                <div class="absolute top-0 left-0 z-20 flex flex-col bg-primary-bgLayoutLeft w-[21.1rem] h-[24.2rem] py-2 pr-3">
                                     <div class="flex flex-row justify-between items-center space-x-1 ml-3 mb-1">
                                         <hr class="border-[1px] w-full border-secundary-boxColorBack">
                                         <div class="flex justify-end">
@@ -215,6 +250,9 @@ function setHoveredOption(data){
                                         <template v-if="buttonOption === 4">
                                             <FrameworkFrontend></FrameworkFrontend>
                                         </template>
+                                        <template v-if="buttonOption === 5">
+                                            <FrameworkBackend></FrameworkBackend>
+                                        </template>
                                         
                                     </div>
                                     <div class="flex flex-row justify-between items-center space-x-1 ml-3 mt-1">
@@ -224,7 +262,7 @@ function setHoveredOption(data){
                                         </div>
                                     </div>
                                 </div>
-                                <div class="my-0 absolute top-[0.2rem] left-[0.2rem] z-10 bg-secundary-boxColorBack w-[21.1rem] h-[20rem]"/>
+                                <div class="my-0 absolute top-[0.2rem] left-[0.2rem] z-10 bg-secundary-boxColorBack w-[21.1rem] h-[24.2rem]"/>
                             </template>
                             
                         </div>
@@ -286,29 +324,32 @@ function setHoveredOption(data){
 
 
 .animate-slite-vertical{
-    animation: vertical-slide-in 0.2s ease-in-out forwards;
+    animation: vertical-slide-in 0.5s ease-in-out forwards;
 }
 
 .animate-slide-in-one{
-    animation: slide-in 0.1s ease-in-out forwards, fade-in 1s ease-in-out forwards;
+    animation: slide-in 0.3s ease-in-out forwards, fade-in 1s ease-in-out forwards;
 }
 .animate-slide-in-two{
-    animation: slide-in 0.2s ease-in-out forwards, fade-in 1.1s ease-in-out forwards;
+    animation: slide-in 0.4s ease-in-out forwards, fade-in 1.1s ease-in-out forwards;
 }
 .animate-slide-in-three{
-    animation: slide-in 0.3s ease-in-out forwards, fade-in 1.2s ease-in-out forwards;
+    animation: slide-in 0.5s ease-in-out forwards, fade-in 1.2s ease-in-out forwards;
 }
 .animate-slide-in-four{
-    animation: slide-in 0.4s ease-in-out forwards, fade-in 1.3s ease-in-out forwards;
+    animation: slide-in 0.6s ease-in-out forwards, fade-in 1.3s ease-in-out forwards;
 }
 .animate-slide-in-five{
-    animation: slide-in 0.5s ease-in-out forwards, fade-in 1.4s ease-in-out forwards;
+    animation: slide-in 0.7s ease-in-out forwards, fade-in 1.4s ease-in-out forwards;
 }
 .animate-slide-in-six{
-    animation: slide-in 0.6s ease-in-out forwards, fade-in 1.5s ease-in-out forwards;
+    animation: slide-in 0.8s ease-in-out forwards, fade-in 1.5s ease-in-out forwards;
 }
 .animate-slide-in-seven{
-    animation: slide-in 0.7s ease-in-out forwards, fade-in 1.6s ease-in-out forwards;
+    animation: slide-in 0.9s ease-in-out forwards, fade-in 1.6s ease-in-out forwards;
+}
+.animate-slide-in-eight{
+    animation: slide-in 1s ease-in-out forwards, fade-in 1.7s ease-in-out forwards;
 }
 
 

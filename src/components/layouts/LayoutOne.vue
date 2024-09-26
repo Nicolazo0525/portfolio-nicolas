@@ -122,20 +122,20 @@ function setHovered(value) {
 }
  */
 /* console.log(route.path) */
-  const gridItems = ref([])
+const gridItems = ref([])
 
 
-  const generateGridItems = () => {
-    const numColums = Math.floor(window.innerWidth / 155)
-    const numRows = 3
-    const totalItems = numColums * numRows 
-    gridItems.value = Array.from({ length: totalItems }, (_, i) => i + 1 )
-  }
+const generateGridItems = () => {
+  const numColums = Math.floor(window.innerWidth / 155)
+  const numRows = 3
+  const totalItems = numColums * numRows 
+  gridItems.value = Array.from({ length: totalItems }, (_, i) => i + 1 )
+}
 
-  onMounted(()=>{
-    generateGridItems()
-    window.addEventListener('resize', generateGridItems)
-  })
+onMounted(()=>{
+  generateGridItems()
+  window.addEventListener('resize', generateGridItems)
+})
 
 </script>
 <template>
@@ -202,7 +202,7 @@ function setHovered(value) {
                             <button :href="href" @click="navigate" @mouseleave="show = false" value="1" 
                               class="relative group inline-block px-2 overflow-hidden uppercase items-center text-left w-36 h-8 text-primary-buttonText bg-primary-butonBack  btn-ola hover:text-primary-default transition-colors cursor-pointer">
                                 
-                              <div class="absolute text-primary-default group-hover:text-primary-buttonText bg-primary-buttonText  group-hover:bg-primary-default w-5 h-5 items-center top-[0.40rem]">
+                              <div class="absolute text-primary-default group-hover:text-primary-buttonText bg-primary-buttonText group-hover:bg-primary-default w-5 h-5 items-center top-[0.40rem]">
                                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-5">
                                   <path fill-rule="evenodd" d="M7.5 6a4.5 4.5 0 1 1 9 0 4.5 4.5 0 0 1-9 0ZM3.751 20.105a8.25 8.25 0 0 1 16.498 0 .75.75 0 0 1-.437.695A18.683 18.683 0 0 1 12 22.5c-2.786 0-5.433-.608-7.812-1.7a.75.75 0 0 1-.437-.695Z" clip-rule="evenodd" />
                                 </svg>
@@ -491,9 +491,6 @@ function setHovered(value) {
         </div>
       </div>
     </div>
-    
-      
-    
   </nav>
     
 </template>
@@ -520,7 +517,7 @@ function setHovered(value) {
   left: -100%;
   width: 100%;
   height: 100%;
-  background-color: #716858;
+  background-color: #4C4840;
   transition: left 0.1s ease;
   z-index: 0;
 }
@@ -554,10 +551,10 @@ function setHovered(value) {
       background-color: #bab6a1;
   }
   50% {
-      background-color: #716858;
+      background-color: #4C4840;
   }
   100% {
-      background-color: #b6b299;
+      background-color: #bab6a1;
   }
 }
 

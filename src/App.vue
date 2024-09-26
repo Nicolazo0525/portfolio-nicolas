@@ -4,6 +4,7 @@ import Layout from './components/layouts/LayoutOne.vue';
 import LayoutSkill from './components/layouts/LayoutSkill.vue';
 import MeshGrid from './components/MeshGrid.vue';
 import { useRoute } from "vue-router";
+import LayoutFooter from './components/layouts/LayoutFooter.vue';
 
 const route = useRoute()
 const toggleLayout = ref(false)
@@ -55,14 +56,17 @@ provide('isHoveredOption', isHoveredOption)
     <div class="z-50 w-full absolute">
       <layout/>
     </div>
-    <div class="z-40 relative flex flex-grow h-screen pt-20">
+    <div class="z-40 relative flex flex-col h-screen pt-20">
       <template v-if="route.path === '/skills/'">
-        <div class="absolute left-0 w-[27rem]">
+        <div class="left-0 relative">
           <layout-skill/>
         </div>
       </template>
       <div class="h-full w-full items-center"><!-- left-[19.1rem] -->
         <router-view/>
+      </div>
+      <div class="z-50 w-full">
+        <layout-footer></layout-footer>
       </div>
     </div>
   </main>

@@ -17,7 +17,7 @@ const {getTrack, album, track, image, errorsAlbum} = useTrack();
         <div class="z-20 items-center index_beams__yWcJT flex flex-row row-span-2 justify-center">
             <div class="flex z-20 justify-center">
                 <div class="w-96 h-96">
-                    <img src="../../../public/photo.png" alt="">
+                    <img src="../../../public/photo.png" class="image-render-pixel" alt="">
                 </div>
             </div>
             <div class="z-20 text-justify">
