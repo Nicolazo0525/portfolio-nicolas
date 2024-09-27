@@ -6,6 +6,9 @@ import ProgrammingLanguages from "./SecondOptions/ProgrammingLanguages.vue";
 import StyleSheetLanguages from "./SecondOptions/StyleSheetLanguages.vue";
 import FrameworkFrontend from "./SecondOptions/FrameworkFrontend.vue";
 import FrameworkBackend from "./SecondOptions/FrameworkBackend.vue";
+import RelationalDatabases from "./SecondOptions/RelationalDatabases.vue";
+import NonRelationalDatabases from "./SecondOptions/NonRelationalDatabases.vue";
+import VersionControl from "./SecondOptions/VersionControl.vue";
 
 
 const route = useRoute()
@@ -192,7 +195,7 @@ onBeforeUnmount(()=>{
                                     </div>
                                     <div class="order-1 button_over cursor-pointer">
                                         <label for="Skill" class="hover:border-y-2 py-2 border-primary-buttonText">
-                                            <button @click="buttonOptionMenu(7), setHoveredPrimary(0)" @mouseover="setHoveredPrimary(6)" @mouseleave="setHoveredPrimary(0)"
+                                            <button @click="buttonOptionMenu(7), setHoveredPrimary(0)" @mouseover="setHoveredPrimary(7)" @mouseleave="setHoveredPrimary(0)"
                                                 class="transform transition-transform duration-500 ease-in-out -translate-x-full animate-slide-in-seven
                                                         relative group inline-block px-2 overflow-hidden w-full hover:shadow-sm hover:h-[2.1rem]  hover:shadow-gray-500 items-center text-left h-8 text-primary-buttonText bg-primary-butonBack btn-menu hover:text-primary-default cursor-pointer">
                                                 
@@ -205,12 +208,12 @@ onBeforeUnmount(()=>{
                                     </div>
                                     <div class="order-1 button_over cursor-pointer">
                                         <label for="Skill" class="hover:border-y-2 py-2 border-primary-buttonText">
-                                            <button @click="buttonOptionMenu(8), setHoveredPrimary(0)" @mouseover="setHoveredPrimary(7)" @mouseleave="setHoveredPrimary(0)"
+                                            <button @click="buttonOptionMenu(8), setHoveredPrimary(0)" @mouseover="setHoveredPrimary(8)" @mouseleave="setHoveredPrimary(0)"
                                                 class="transform transition-transform duration-500 ease-in-out -translate-x-full animate-slide-in-eight
                                                         relative group inline-block px-2 overflow-hidden w-full hover:shadow-sm hover:h-[2.1rem]  hover:shadow-gray-500 items-center text-left h-8 text-primary-buttonText bg-primary-butonBack btn-menu hover:text-primary-default cursor-pointer">
                                                 
                                                 <div class="absolute p-1 text-primary-default group-hover:text-primary-buttonText bg-primary-buttonText group-hover:bg-primary-default w-5 h-5 items-center top-[0.40rem]">
-                                                    <div class="triangle-seven w-5 h-5"></div>
+                                                    <div class="triangle-eight w-5 h-5"></div>
                                                 </div>
                                                 <span class="ml-6 ">Version Control</span>
                                             </button>
@@ -253,7 +256,15 @@ onBeforeUnmount(()=>{
                                         <template v-if="buttonOption === 5">
                                             <FrameworkBackend></FrameworkBackend>
                                         </template>
-                                        
+                                        <template v-if="buttonOption === 6">
+                                            <RelationalDatabases></RelationalDatabases>
+                                        </template>
+                                        <template v-if="buttonOption === 7">
+                                            <NonRelationalDatabases></NonRelationalDatabases>
+                                        </template>
+                                        <template v-if="buttonOption === 8">
+                                            <VersionControl></VersionControl>
+                                        </template>
                                     </div>
                                     <div class="flex flex-row justify-between items-center space-x-1 ml-3 mt-1">
                                         <hr class="border-[1px] w-full border-secundary-boxColorBack">
@@ -380,21 +391,13 @@ onBeforeUnmount(()=>{
 
 .triangle-four {
     background-image:
-      linear-gradient(to bottom right, #ae9a7d 25%, transparent 0),
-      linear-gradient(to top right, #ae9a7d 0, transparent 0);
+      linear-gradient(to bottom right, #CCC398 25%, transparent 0),
+      linear-gradient(to top right, #CCC398 0, transparent 0);
     background-repeat: no-repeat;
     background-position: left, right;
 }
 
 .triangle-five {
-    background-image:
-      linear-gradient(to bottom right, #dfbf9c 25%, transparent 0),
-      linear-gradient(to top right, #dfbf9c 0, transparent 0);
-    background-repeat: no-repeat;
-    background-position: left, right;
-}
-
-.triangle-six {
     background-image:
       linear-gradient(to bottom right, #E2D9A7 25%, transparent 0),
       linear-gradient(to top right, #E2D9A7 0, transparent 0);
@@ -402,7 +405,22 @@ onBeforeUnmount(()=>{
     background-position: left, right;
 }
 
+.triangle-six {
+    background-image:
+      linear-gradient(to bottom right, #F7DEC0 25%, transparent 0),
+      linear-gradient(to top right, #F7DEC0 0, transparent 0);
+    background-repeat: no-repeat;
+    background-position: left, right;
+}
+
 .triangle-seven {
+    background-image:
+      linear-gradient(to bottom right, #FFECD6 25%, transparent 0),
+      linear-gradient(to top right, #FFECD6 0, transparent 0);
+    background-repeat: no-repeat;
+    background-position: left, right;
+}
+.triangle-eight {
     background-image:
       linear-gradient(to bottom right, #ffffff 25%, transparent 0),
       linear-gradient(to top right, #ffffff 0, transparent 0);

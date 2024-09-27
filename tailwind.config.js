@@ -29,10 +29,11 @@ export default {
           One: '#8c8068',
           two: '#cc846b',
           three: '#ad9065',
-          four: '#ae9a7d',
-          five: '#dfbf9c',
-          six: '#EBC9A4',
-          seven: '#ffffff'
+          four: '#CCC398',
+          five: '#E2D9A7',/* dfbf9c */
+          six: '#F7DEC0',/* F7DEC0 */
+          seven: '#FFECD6',
+          eight: '#ffffff',
         },
       },
     },
