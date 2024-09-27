@@ -256,7 +256,7 @@ onBeforeUnmount(()=>{
                                         <template v-if="buttonOption === 5">
                                             <FrameworkBackend></FrameworkBackend>
                                         </template>
-                                        <template v-if="buttonOption === 6">
+                                        <!-- <template v-if="buttonOption === 6">
                                             <RelationalDatabases></RelationalDatabases>
                                         </template>
                                         <template v-if="buttonOption === 7">
@@ -264,7 +264,7 @@ onBeforeUnmount(()=>{
                                         </template>
                                         <template v-if="buttonOption === 8">
                                             <VersionControl></VersionControl>
-                                        </template>
+                                        </template> -->
                                     </div>
                                     <div class="flex flex-row justify-between items-center space-x-1 ml-3 mt-1">
                                         <hr class="border-[1px] w-full border-secundary-boxColorBack">
