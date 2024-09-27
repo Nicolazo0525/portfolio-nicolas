@@ -1,4 +1,4 @@
-import axios from "axios";
+/* import axios from "axios";
 
 const authUrl = 'https://accounts.spotify.com/api/token';
 const clientId = '52dd07aefe5147f7bed88258d1ad7af7';
@@ -52,7 +52,7 @@ getTokenAccount().then(tokenAccount => {
     );
 });
 
-
+ */
 // Request interceptors for API calls
 
 /* localAxios.interceptors.request.use(
@@ -67,4 +67,4 @@ getTokenAccount().then(tokenAccount => {
     }
 ); */
 
-export default localAxios;
+/* export default localAxios; */
