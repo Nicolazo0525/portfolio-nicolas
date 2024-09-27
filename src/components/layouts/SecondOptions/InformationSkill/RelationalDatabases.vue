@@ -159,7 +159,7 @@ const isHoveredOption = inject('isHoveredOption')
         <div class="w-full space-y-2">
             <div class="w-full h-full flex justify-center">
                 <div class="w-40 h-28 rounded-md shadow-sm shadow-dark-600">
-                    <img src="../../../../../public/SQL_server.png" class="w-40 h-28 object-fill rounded-md" alt="">
+                    <img src="../../../../../public/sql_server.png" class="w-40 h-28 object-fill rounded-md" alt="">
                 </div>
             </div>
             <hr class="bg-[#4C4840] border-[#4C4840]">
