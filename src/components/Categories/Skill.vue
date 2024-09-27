@@ -128,16 +128,16 @@ const isHoveredOption = inject('isHoveredOption')
               <h2>Lv: Junior</h2>
             </div>
             <hr class="bg-[#4C4840] border-[#4C4840]">
-            <template v-if="isHoveredOption != 0 && isHoveredOption >= 12">
-              <programming-languages></programming-languages>
-              <style-sheet-languages></style-sheet-languages>
-              <framework-frontend></framework-frontend>
-              <framework-backend></framework-backend>
-              <relational-databases></relational-databases>
-              <non-relational-databases></non-relational-databases>
-              <version-control></version-control>
+            <template v-if="isHoveredOption != 0">
+              <ProgrammingLanguages></ProgrammingLanguages>
+              <StyleSheetLanguages></StyleSheetLanguages>
+              <FrameworkFrontend></FrameworkFrontend>
+              <FrameworkBackend></FrameworkBackend>
+              <RelationalDatabases></RelationalDatabases>
+              <NonRelationalDatabases></NonRelationalDatabases>
+              <VersionControl></VersionControl>
             </template>
-            <template v-if="isHoveredOption === 0 && isHoveredOption <= 12">
+            <template v-if="isHoveredOption === 0">
               <div class="w-full space-y-2">
                 <div class="w-full h-full flex justify-center">
                   <div class="w-28 h-28 rounded-md shadow-sm shadow-dark-600">

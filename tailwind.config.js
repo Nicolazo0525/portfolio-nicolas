@@ -30,8 +30,8 @@ export default {
           two: '#cc846b',
           three: '#ad9065',
           four: '#CCC398',
-          five: '#E2D9A7',/* dfbf9c */
-          six: '#F7DEC0',/* F7DEC0 */
+          five: '#E2D9A7',
+          six: '#F7DEC0',
           seven: '#FFECD6',
           eight: '#ffffff',
         },
