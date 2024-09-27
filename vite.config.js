@@ -15,7 +15,7 @@ export default defineConfig({
   }
 }) */
 /* Local */
-import { defineConfig } from 'vite'
+/* import { defineConfig } from 'vite'
 import vue from '@vitejs/plugin-vue'
 
 //https://vitejs.dev/config/
@@ -24,7 +24,7 @@ import vue from '@vitejs/plugin-vue'
   server:{
     port:3000
   }
-}) 
+})  */
 /* Github Pages */
 /* import { defineConfig } from 'vite'
 import vue from '@vitejs/plugin-vue'
@@ -49,11 +49,11 @@ export default defineConfig({
  */
 
 /* Netlify */
-/* import { defineConfig } from 'vite'
+import { defineConfig } from 'vite'
 import vue from '@vitejs/plugin-vue'
 
 // https://vitejs.dev/config/
 export default defineConfig({
   plugins: [vue()],
   base: 'https://portfolio-nicolas-ramos.netlify.app/',
-}) */
+})
