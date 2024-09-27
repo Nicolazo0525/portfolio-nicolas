@@ -1,8 +1,8 @@
 <script setup>
 import { onMounted } from 'vue'
-import useTrack from "../../composables/track"
-
-const {getTrack, album, track, image, errorsAlbum} = useTrack();
+/* import useTrack from "../../composables/track" */
+/* 
+const {getTrack, album, track, image, errorsAlbum} = useTrack(); */
 
 
 

@@ -197,8 +197,8 @@ onMounted(()=>{
                     <div class="flex flex-row items-center">
                       
                       <div class="order-2 button_over cursor-pointer">
-                        <label for="AboutMe" class="hover:border-y-2 py-2 border-secundary-buttonDefoult">
-                          <router-link :to="{name: 'AboutMe'}" v-slot="{ href, navigate }" :key="index" :class="{ active: index === countKeyButton }">
+                        <label for="AboutMe" class="hover:border-y-2 py-2 border-secundary-buttonDefoult"><!-- :key="index" :class="{ active: index === countKeyButton }" -->
+                          <router-link :to="{name: 'AboutMe'}" v-slot="{ href, navigate }" >
                             <button :href="href" @click="navigate" @mouseleave="show = false" value="1" 
                               class="relative group inline-block px-2 overflow-hidden uppercase items-center text-left w-36 h-8 text-primary-buttonText bg-primary-butonBack  btn-ola hover:text-primary-default transition-colors cursor-pointer">
                                 
