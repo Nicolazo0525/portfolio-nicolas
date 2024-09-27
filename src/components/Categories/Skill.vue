@@ -133,11 +133,11 @@ const isHoveredOption = inject('isHoveredOption')
               <StyleSheetLanguages></StyleSheetLanguages>
               <FrameworkFrontend></FrameworkFrontend>
               <FrameworkBackend></FrameworkBackend>
-              <!-- <RelationalDatabases></RelationalDatabases>
+              <RelationalDatabases></RelationalDatabases>
               <NonRelationalDatabases></NonRelationalDatabases>
-              <VersionControl></VersionControl> -->
+              <VersionControl></VersionControl>
             </template>
-            <template v-if="isHoveredOption === 0">
+            <!-- <template v-if="isHoveredOption === 0">
               <div class="w-full space-y-2">
                 <div class="w-full h-full flex justify-center">
                   <div class="w-28 h-28 rounded-md shadow-sm shadow-dark-600">
@@ -337,7 +337,7 @@ const isHoveredOption = inject('isHoveredOption')
                   </div>
                 </div>
               </div>
-            </template>
+            </template> -->
           </div>
         </div>
       </div>
