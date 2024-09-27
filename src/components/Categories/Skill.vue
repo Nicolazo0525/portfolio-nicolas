@@ -133,9 +133,9 @@ const isHoveredOption = inject('isHoveredOption')
               <StyleSheetLanguages></StyleSheetLanguages>
               <FrameworkFrontend></FrameworkFrontend>
               <FrameworkBackend></FrameworkBackend>
-              <RelationalDatabases></RelationalDatabases>
+              <!-- <RelationalDatabases></RelationalDatabases>
               <NonRelationalDatabases></NonRelationalDatabases>
-              <VersionControl></VersionControl>
+              <VersionControl></VersionControl> -->
             </template>
             <template v-if="isHoveredOption === 0">
               <div class="w-full space-y-2">
