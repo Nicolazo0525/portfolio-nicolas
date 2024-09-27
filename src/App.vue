@@ -62,7 +62,7 @@ provide('isHoveredOption', isHoveredOption)
           <layout-skill/>
         </div>
       </template>
-      <div class="h-full w-full items-center overflow-y-hidden"><!-- left-[19.1rem] -->
+      <div class="h-full w-full"><!-- left-[19.1rem] -->
         <router-view/>
       </div>
       <div class="z-50 w-full">
