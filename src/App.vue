@@ -56,7 +56,7 @@ provide('isHoveredOption', isHoveredOption)
     <div class="z-50 w-full absolute">
       <layout/>
     </div>
-    <div class="z-40 relative flex flex-col h-screen pt-20 overflow-y-hidden">
+    <div class="z-40 relative flex flex-col h-screen pt-20">
       <template v-if="route.path === '/skills/'">
         <div class="left-0 relative">
           <layout-skill/>
