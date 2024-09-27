@@ -19,7 +19,7 @@ onMounted(()=>{
 <template>
     <div class="absolute z-50 bottom-[0.15rem] w-full h-10 border-t-2 border-t-secundary-buttonlagout">
         <div class="flex flex-row mx-12 justify-center">
-            <!-- <template v-for="(item,n) in gridItems" :key="n">
+            <template v-for="(item,n) in gridItems" :key="n">
                 <template v-if="n === 0">
                     <div class="w-14 h-10">
                         <div class="w-full grid grid-cols-2 grid-rows-1">
@@ -98,7 +98,7 @@ onMounted(()=>{
                         </div>
                     </div>
                 </template>
-            </template> -->
+            </template>
             
           </div>
     </div>

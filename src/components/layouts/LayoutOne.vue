@@ -450,7 +450,7 @@ onMounted(()=>{
 
     </div>
     <div class="flex flex-row mx-12 justify-center">
-      <!-- <template v-for="(item,n) in gridItems" :key="n">
+      <template v-for="(item,n) in gridItems" :key="n">
         <template v-if="n === 0">
           <div class="w-14 h-10">
             <div class="w-full grid grid-cols-2 grid-rows-1">
@@ -527,7 +527,7 @@ onMounted(()=>{
           </div>
         </template>
         
-      </template> -->
+      </template>
       
     </div>
   </nav>
