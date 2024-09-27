@@ -14,8 +14,8 @@ const isHoveredOption = inject('isHoveredOption')
 
 </script>
 <template>
-  <div class="w-full h-full">
-    <div class="w-full mt-20 mb-14 flex flex-col overflow-y-clip">
+  <div class="w-full h-full pt-20">
+    <div class="w-full mt-20 mb-14 flex flex-col">
       <div class="flex justify-center relative">
         <div class="relative">
           <div class="flex flex-col w-36 h-[24.4rem] ">
