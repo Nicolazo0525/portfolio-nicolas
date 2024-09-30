@@ -18,11 +18,43 @@ const isHovered = inject('isHovered')
 const isHoveredPrimary = inject('isHoveredPrimary')
 const isHoveredOption = inject('isHoveredOption')
 const buttonOption = ref(0)
+const buttonOptionText = ref('')
 
 // Change button option menu 
 const buttonOptionMenu = (option) =>{
     buttonOption.value = option
+    switch (buttonOption.value) {
+        case 1:
+            buttonOptionText.value = 'Soft Skills'
+            break;
+        case 2:
+            buttonOptionText.value = 'Programming Languages'
+            break;
+        case 3:
+            buttonOptionText.value = 'Style Sheet Languages'
+            break;
+        case 4:
+            buttonOptionText.value = 'Frameworks Frontend'
+            break;
+        case 5:
+            buttonOptionText.value = 'Frameworks Backend'
+            break;
+        case 6:
+            buttonOptionText.value = 'Relational Databases'
+            break;
+        case 7:
+            buttonOptionText.value = 'Non-Relational Databases'
+            break;
+        case 8:
+            buttonOptionText.value = 'Version Control'
+            break;
+
+        default:
+            break;
+    }
 }
+
+
 
 function setHovered(value) {
   console.log(value)
@@ -60,52 +92,61 @@ onBeforeUnmount(()=>{
 </script>
 
 <template>
-    <main class="h-full items-center z-50 absolute pt-20 w-[27rem]">
+    <main class="h-full items-center z-50 absolute w-[27rem]">
         <!-- Skills layout -->
         <template v-if="route.path === '/skills/'">
-            <div class="relative flex flex-col flex-1">
+            <div class="flex flex-col flex-1">
                 <!-- Title Shadow -->
                 <div>
-                    <div class="absolute left-[3.3rem] top-1 text-secundary-buttonlagout text-4xl flex flex-row space-x-1 ">
-                        <div class="text-4xl uppercase">
-                            s
+                    <div class="w-full">
+                        <div class="flex flex-row">
+                            <div class="absolute left-[3.3rem] top-1 text-secundary-buttonlagout text-4xl flex flex-row space-x-1 ">
+                                <div class="text-4xl uppercase">
+                                    s
+                                </div>
+                                <div class="text-4xl uppercase">
+                                    k
+                                </div>
+                                <div class="text-4xl uppercase">
+                                    i
+                                </div>
+                                <div class="text-4xl uppercase">
+                                    l
+                                </div>
+                                <div class="text-4xl uppercase">
+                                    l
+                                </div>
+                                <div class="text-4xl uppercase">
+                                    s
+                                </div>
+                            </div>
+                            <!-- Tittle -->
+                            <div class="absolute left-[3rem] top-0 text-primary-buttonText text-4xl flex flex-row space-x-1">
+                                <div class="text-4xl uppercase">
+                                    s
+                                </div>
+                                <div class="text-4xl uppercase">
+                                    k
+                                </div>
+                                <div class="text-4xl uppercase">
+                                    i
+                                </div>
+                                <div class="text-4xl uppercase">
+                                    l
+                                </div>
+                                <div class="text-4xl uppercase">
+                                    l
+                                </div>
+                                <div class="text-4xl uppercase">
+                                    s
+                                </div>
+                            </div>
                         </div>
-                        <div class="text-4xl uppercase">
-                            k
-                        </div>
-                        <div class="text-4xl uppercase">
-                            i
-                        </div>
-                        <div class="text-4xl uppercase">
-                            l
-                        </div>
-                        <div class="text-4xl uppercase">
-                            l
-                        </div>
-                        <div class="text-4xl uppercase">
-                            s
-                        </div>
-                    </div>
-                    <!-- Tittle -->
-                    <div class="absolute left-[3rem] top-0 text-primary-buttonText text-4xl flex flex-row space-x-1 ">
-                        <div class="text-4xl uppercase">
-                            s
-                        </div>
-                        <div class="text-4xl uppercase">
-                            k
-                        </div>
-                        <div class="text-4xl uppercase">
-                            i
-                        </div>
-                        <div class="text-4xl uppercase">
-                            l
-                        </div>
-                        <div class="text-4xl uppercase">
-                            l
-                        </div>
-                        <div class="text-4xl uppercase">
-                            s
-                        </div>
+                        <template v-if="buttonOption != 0">
+                            <div class="absolute type_writer_option left-[13rem] text-[#4C4840] font-medium top-[0.75rem] text-lg transform transition-transform duration-500 ease-in-out">
+                                <span>- {{ buttonOptionText }}</span>
+                            </div>
+                        </template>
                     </div>
                     <div class="flex flex-row ml-12 mt-20 space-x-7 h-[24.5rem]">
                         <div class="order-1 left-0 flex flex-row space-x-1 opacity-0 transform transition-transform duration-500 ease-in-out -translate-x-full animate-slite-vertical">
@@ -189,7 +230,7 @@ onBeforeUnmount(()=>{
                                                 <div class="absolute p-1 text-primary-default group-hover:text-primary-buttonText bg-primary-buttonText group-hover:bg-primary-default w-5 h-5 items-center top-[0.40rem]">
                                                     <div class="triangle-six w-5 h-5"></div>
                                                 </div>
-                                                <span class="ml-6 ">Relational databases</span>
+                                                <span class="ml-6 ">Relational Databases</span>
                                             </button>
                                         </label>
                                     </div>
@@ -202,7 +243,7 @@ onBeforeUnmount(()=>{
                                                 <div class="absolute p-1 text-primary-default group-hover:text-primary-buttonText bg-primary-buttonText group-hover:bg-primary-default w-5 h-5 items-center top-[0.40rem]">
                                                     <div class="triangle-six w-5 h-5"></div>
                                                 </div>
-                                                <span class="ml-6 ">Non-relational databases</span>
+                                                <span class="ml-6 ">Non-relational Databases</span>
                                             </button>
                                         </label>
                                     </div>
@@ -285,7 +326,31 @@ onBeforeUnmount(()=>{
 </template>
 
 <style>
+/* Animation title option */
 
+@keyframes typing{
+    from {width: 0;}
+    to {width: 100%;}
+}
+
+@keyframes slide-in-option {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.type_writer_option{
+
+    display: inline-block;
+    /*asegura que el texto permanezca oculto hasta que se revele*/
+    overflow: hidden;
+    /*Evita que el texto se envuelva*/
+    white-space: nowrap;
+    animation: slide-in-option 0.5s ease-in-out forwards ,typing 2s steps(40, end);
+}
 /* animation slide menu */
 
 @keyframes fade-in {
