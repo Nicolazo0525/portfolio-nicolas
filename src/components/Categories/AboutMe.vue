@@ -13,7 +13,7 @@ const {getTrack, album, track, image, errorsAlbum} = useTrack(); */
 </script>
 
 <template>
-    <main class="h-full w-full relative flex flex-col justify-start pt-20 pb-10 overflow-hidden"><!-- dark:bg-secundary-buttonlagout -->
+    <div class="h-full w-full relative flex flex-col justify-start pt-20 pb-10 overflow-hidden"><!-- dark:bg-secundary-buttonlagout -->
         <div class="flex flex-row ml-12">
             <div class="order-1 left-0 flex flex-row space-x-1 opacity-0 transform transition-transform duration-500 ease-in-out -translate-x-full animate-slite-vertical">
                 <div class="w-[0.7rem] h-full bg-primary-butonBack"/>
@@ -170,7 +170,7 @@ const {getTrack, album, track, image, errorsAlbum} = useTrack(); */
                 <div class="absolute top-[0.2rem] left-[0.15rem] z-10 bg-secundary-boxColorBack w-[99.8%] h-[2.8rem]"/>
             </div>
         </div>
-    </main>
+    </div>
     
 </template>
 

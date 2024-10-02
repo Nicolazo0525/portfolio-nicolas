@@ -174,7 +174,7 @@ onMounted(()=>{
                         <label for="AboutMe py-2" class="">
                           <router-link :to="{name: 'AboutMe'}" v-slot="{ href, navigate }" class="">
                             <button :href="href" @click="navigate" @mouseover="show = true" @mouseleave="show = false" 
-                              class="relative group boton-cambio-color uppercase items-center text-left px-2 pt-1 pb-4 w-36 transition-all duration-300 bg-secundary-buttonlagout text-primary-default hover:bg-primary-buttonlagout hover:text-secundary-buttonlagout">
+                              class="relative group boton-cambio-color uppercase items-center text-left px-2 pt-1 pb-4 w-36 transition-all duration-300 bg-[#4C4840] text-primary-default">
                               
                               <div class="absolute text-primary-buttonText bg-primary-default w-5 h-5 items-center top-[0.40rem]">
                                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-5">
@@ -228,7 +228,7 @@ onMounted(()=>{
                         <label for="Skill" class="">
                           <router-link :to="{name: 'Skill'}" v-slot="{ href, navigate }">
                             <button :href="href" @click="navigate" @mouseover="show = true" @mouseleave="show = false" 
-                            class="relative group boton-cambio-color uppercase items-center text-left px-2 pt-1 pb-4 w-36 transition-all duration-300 bg-secundary-buttonlagout text-primary-default hover:bg-primary-buttonlagout hover:text-secundary-buttonlagout">
+                            class="relative group boton-cambio-color uppercase items-center text-left px-2 pt-1 pb-4 w-36 transition-all duration-300 bg-[#4C4840] text-primary-default">
                               
                             <div class="absolute text-primary-buttonText bg-primary-default w-5 h-5 items-center top-[0.40rem]">
                               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-5">
@@ -279,7 +279,7 @@ onMounted(()=>{
                         <label for="AboutMe py-2" class="">
                           <router-link :to="{name: 'Project'}" v-slot="{ href, navigate }" class="">
                             <button :href="href" @click="navigate" @mouseover="show = true" @mouseleave="show = false" 
-                              class="relative group boton-cambio-color uppercase items-center text-left px-2 pt-1 pb-4 w-36 transition-all duration-300 bg-secundary-buttonlagout text-primary-default hover:bg-primary-buttonlagout hover:text-secundary-buttonlagout">
+                              class="relative group boton-cambio-color uppercase items-center text-left px-2 pt-1 pb-4 w-36 transition-all duration-300 bg-[#4C4840] text-primary-default">
                               
                               <div class="absolute text-primary-buttonText bg-primary-default w-5 h-5 items-center top-[0.40rem]">
                                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-5">
@@ -328,7 +328,7 @@ onMounted(()=>{
                         <label for="Studie" class="">
                           <router-link :to="{name: 'Certificate'}" v-slot="{ href, navigate }" class="">
                             <button :href="href" @click="navigate" @mouseover="show = true" @mouseleave="show = false" 
-                            class="relative group boton-cambio-color uppercase items-center text-left px-2 pt-1 pb-4 w-36 transition-all duration-300 bg-secundary-buttonlagout text-primary-default hover:bg-primary-buttonlagout hover:text-secundary-buttonlagout">
+                            class="relative group boton-cambio-color uppercase items-center text-left px-2 pt-1 pb-4 w-36 transition-all duration-300 bg-[#4C4840] text-primary-default">
                               
                             <div class="absolute text-primary-buttonText bg-primary-default w-5 h-5 items-center top-[0.40rem]">
                               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-5">
@@ -380,7 +380,7 @@ onMounted(()=>{
                         <label for="AboutMe py-2" class="">
                           <router-link :to="{name: 'Media'}" v-slot="{ href, navigate }" class="">
                             <button :href="href" @click="navigate" @mouseover="show = true" @mouseleave="show = false" 
-                              class="relative group boton-cambio-color uppercase items-center text-left px-2 pt-1 pb-4 w-36 transition-all duration-300 bg-secundary-buttonlagout text-primary-default hover:bg-primary-buttonlagout hover:text-secundary-buttonlagout">
+                              class="relative group boton-cambio-color uppercase items-center text-left px-2 pt-1 pb-4 w-36 transition-all duration-300 bg-[#4C4840] text-primary-default">
                                 
                               <div class="absolute text-primary-buttonText bg-primary-default w-5 h-5 items-center top-[0.40rem]">
                                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-5">
@@ -401,7 +401,7 @@ onMounted(()=>{
                         <label for="Media" class="hover:border-y-2 py-2 border-secundary-buttonDefoult">
                           <router-link :to="{name: 'Media'}" v-slot="{ href, navigate }" class="">
                             <button :href="href" @click="navigate" @mouseover="show = true" @mouseleave="show = false"
-                              class="relative group inline-block px-2 overflow-hidden uppercase items-center text-left w-36 h-8 text-primary-buttonText bg-primary-butonBack  btn-ola hover:text-primary-default transition-colors cursor-pointer">
+                              class="relative group inline-block px-2 overflow-hidden uppercase items-center text-left w-36 h-8 text-primary-buttonText bg-primary-butonBack btn-ola hover:text-primary-default transition-colors cursor-pointer">
                                 
                               <div class="absolute text-primary-default group-hover:text-primary-buttonText bg-primary-buttonText  group-hover:bg-primary-default w-5 h-5 items-center top-[0.40rem]">
                                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-5">
@@ -587,18 +587,18 @@ onMounted(()=>{
 
 @keyframes cambioColor {
   0% {
-      background-color: #bab6a1;
+    opacity: 0.7;
   }
   50% {
-      background-color: #4C4840;
+    opacity: 1;
   }
   100% {
-      background-color: #bab6a1;
+    opacity:0.7;
   }
 }
 
 .boton-cambio-color {
-  animation: cambioColor 1s infinite;
+  animation: cambioColor 1.5s infinite;
 }
 
 * {

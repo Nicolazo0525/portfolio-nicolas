@@ -21,99 +21,99 @@ const isHoveredOption = inject('isHoveredOption')
           <div class="flex flex-col w-36 h-[24.4rem] ">
             <div class="relative flex flex-col sm:gap-[2px] md:gap-[2px] lg:gap-[2px] xl:gap-[2px] w-[9rem] h-96 bg-secundary-boxColor">
               <!-- SOFT SKILLS -->
-              <div class="relative flex justify-center w-full h-1 mx-auto" :class="isHoveredOption === 1 || isHoveredPrimary === 1 ? 'w-40' : 'w-full'">
-                <div class="absolute top-0 mx-auto h-1 bg-boxColor-One" :class="isHoveredOption === 1 || isHoveredPrimary === 1 ? 'w-40' : 'w-full'"/>
+              <div class="relative flex justify-center w-full h-1 mx-auto" >
+                <div class="absolute top-0 mx-auto h-1 bg-boxColor-One" :class="isHoveredOption === 1 || isHoveredPrimary === 1 ? 'w-44' : 'w-full'"/>
               </div>
               <div class="relative flex justify-center w-full h-1 mx-auto">
-                <div class="absolute top-0 mx-auto h-1 bg-boxColor-One" :class="isHoveredOption === 2 || isHoveredPrimary === 1 ? 'w-40' : 'w-full'"/>
+                <div class="absolute top-0 mx-auto h-1 bg-boxColor-One" :class="isHoveredOption === 2 || isHoveredPrimary === 1 ? 'w-44' : 'w-full'"/>
               </div>
               <div class="relative flex justify-center w-full h-1 mx-auto">
-                <div class="absolute top-0 mx-auto h-1 bg-boxColor-One" :class="isHoveredOption === 3 || isHoveredPrimary === 1 ? 'w-40' : 'w-full'"/>
+                <div class="absolute top-0 mx-auto h-1 bg-boxColor-One" :class="isHoveredOption === 3 || isHoveredPrimary === 1 ? 'w-44' : 'w-full'"/>
               </div>
               <div class="relative flex justify-center w-full h-1 mx-auto">
-                <div class="absolute top-0 mx-auto h-1 bg-boxColor-One" :class="isHoveredOption === 4 || isHoveredPrimary === 1 ? 'w-40' : 'w-full'"/>
+                <div class="absolute top-0 mx-auto h-1 bg-boxColor-One" :class="isHoveredOption === 4 || isHoveredPrimary === 1 ? 'w-44' : 'w-full'"/>
               </div>
               <div class="relative flex justify-center w-full h-1 mx-auto">
-                <div class="absolute top-0 mx-auto h-1 bg-boxColor-One" :class="isHoveredOption === 5 || isHoveredPrimary === 1 ? 'w-40' : 'w-full'"/>
+                <div class="absolute top-0 mx-auto h-1 bg-boxColor-One" :class="isHoveredOption === 5 || isHoveredPrimary === 1 ? 'w-44' : 'w-full'"/>
               </div>
               <div class="relative flex justify-center w-full h-1 mx-auto">
-                <div class="absolute top-0 mx-auto h-1 bg-boxColor-One" :class="isHoveredOption === 7 || isHoveredPrimary === 1 ? 'w-40' : 'w-full'"/>
+                <div class="absolute top-0 mx-auto h-1 bg-boxColor-One" :class="isHoveredOption === 7 || isHoveredPrimary === 1 ? 'w-44' : 'w-full'"/>
               </div>
               <div class="relative flex justify-center w-full h-1 mx-auto">
-                <div class="absolute top-0 mx-auto h-1 bg-boxColor-One" :class="isHoveredOption === 9 || isHoveredPrimary === 1 ? 'w-40' : 'w-full'"/>
+                <div class="absolute top-0 mx-auto h-1 bg-boxColor-One" :class="isHoveredOption === 9 || isHoveredPrimary === 1 ? 'w-44' : 'w-full'"/>
               </div>
               <div class="relative flex justify-center w-full h-1 mx-auto">
-                <div class="absolute top-0 mx-auto h-1 bg-boxColor-One" :class="isHoveredOption === 10 || isHoveredPrimary === 1 ? 'w-40' : 'w-full'"/>
+                <div class="absolute top-0 mx-auto h-1 bg-boxColor-One" :class="isHoveredOption === 10 || isHoveredPrimary === 1 ? 'w-44' : 'w-full'"/>
               </div>
               <div class="relative flex justify-center w-full h-1 mx-auto">
-                <div class="absolute top-0 mx-auto h-1 bg-boxColor-One" :class="isHoveredOption === 11 || isHoveredPrimary === 1 ? 'w-40' : 'w-full'"/>
+                <div class="absolute top-0 mx-auto h-1 bg-boxColor-One" :class="isHoveredOption === 11 || isHoveredPrimary === 1 ? 'w-44' : 'w-full'"/>
               </div>
               <div class="relative flex justify-center w-full h-1 mx-auto">
-                <div class="absolute top-0 mx-auto h-1 bg-boxColor-One" :class="isHoveredOption === 12 || isHoveredPrimary === 1 ? 'w-40' : 'w-full'"/>
+                <div class="absolute top-0 mx-auto h-1 bg-boxColor-One" :class="isHoveredOption === 12 || isHoveredPrimary === 1 ? 'w-44' : 'w-full'"/>
               </div>
               <!-- PROGRAMMING LENGUAGES -->
               <div class="relative flex justify-center w-full h-2 mx-auto">
-                <div class="absolute top-0 mx-auto h-2 bg-boxColor-two" :class="isHoveredOption === 13 || isHoveredPrimary === 2 ? 'w-40' : 'w-full'"/>
+                <div class="absolute top-0 mx-auto h-2 bg-boxColor-two" :class="isHoveredOption === 13 || isHoveredPrimary === 2 ? 'w-44' : 'w-full'"/>
               </div>
               <div class="relative flex justify-center w-full h-7 mx-auto">
-                <div class="absolute top-0 mx-auto h-7 bg-boxColor-two" :class="isHoveredOption === 17 || isHoveredPrimary === 2 ? 'w-40' : 'w-full'"/>
+                <div class="absolute top-0 mx-auto h-7 bg-boxColor-two" :class="isHoveredOption === 17 || isHoveredPrimary === 2 ? 'w-44' : 'w-full'"/>
               </div>
               <div class="relative flex justify-center w-full h-6 mx-auto">
-                <div class="absolute top-0 mx-auto h-6 bg-boxColor-two" :class="isHoveredOption === 18 || isHoveredPrimary === 2 ? 'w-40' : 'w-full'"/>
+                <div class="absolute top-0 mx-auto h-6 bg-boxColor-two" :class="isHoveredOption === 18 || isHoveredPrimary === 2 ? 'w-44' : 'w-full'"/>
               </div>
               <div class="relative flex justify-center w-full h-3 mx-auto">
-                <div class="absolute top-0 mx-auto h-3 bg-boxColor-two" :class="isHoveredOption === 19 || isHoveredPrimary === 2 ? 'w-40' : 'w-full'"/>
+                <div class="absolute top-0 mx-auto h-3 bg-boxColor-two" :class="isHoveredOption === 19 || isHoveredPrimary === 2 ? 'w-44' : 'w-full'"/>
               </div>
               <div class="relative flex justify-center w-full h-5 mx-auto">
-                <div class="absolute top-0 mx-auto h-5 bg-boxColor-two" :class="isHoveredOption === 20 || isHoveredPrimary === 2 ? 'w-40' : 'w-full'"/>
+                <div class="absolute top-0 mx-auto h-5 bg-boxColor-two" :class="isHoveredOption === 20 || isHoveredPrimary === 2 ? 'w-44' : 'w-full'"/>
               </div>
               <!-- Style Sheet Languages -->
               <div class="relative flex justify-center w-full h-4 mx-auto">
-                <div class="absolute top-0 mx-auto h-4 bg-boxColor-three" :class="isHoveredOption === 23 || isHoveredPrimary === 3 ? 'w-40' : 'w-full'"/>
+                <div class="absolute top-0 mx-auto h-4 bg-boxColor-three" :class="isHoveredOption === 23 || isHoveredPrimary === 3 ? 'w-44' : 'w-full'"/>
               </div>
               <!-- Framework Frontend -->
               <div class="relative flex justify-center w-full h-2 mx-auto">
-                <div class="absolute top-0 mx-auto h-2 bg-boxColor-four" :class="isHoveredOption === 29 || isHoveredPrimary === 4 ? 'w-40' : 'w-full'"/>
+                <div class="absolute top-0 mx-auto h-2 bg-boxColor-four" :class="isHoveredOption === 29 || isHoveredPrimary === 4 ? 'w-44' : 'w-full'"/>
               </div>
               <div class="relative flex justify-center w-full h-8 mx-auto">
-                <div class="absolute top-0 mx-auto h-8 bg-boxColor-four" :class="isHoveredOption === 36 || isHoveredPrimary === 4 ? 'w-40' : 'w-full'"/>
+                <div class="absolute top-0 mx-auto h-8 bg-boxColor-four" :class="isHoveredOption === 36 || isHoveredPrimary === 4 ? 'w-44' : 'w-full'"/>
               </div>
               <!-- Framework Backend -->
               <div class="relative flex justify-center w-full h-1 mx-auto">
-                <div class="absolute top-0 mx-auto h-1 bg-boxColor-five" :class="isHoveredOption === 37 || isHoveredPrimary === 5 ? 'w-40' : 'w-full'"/>
+                <div class="absolute top-0 mx-auto h-1 bg-boxColor-five" :class="isHoveredOption === 37 || isHoveredPrimary === 5 ? 'w-44' : 'w-full'"/>
               </div>
               <div class="relative flex justify-center w-full h-6 mx-auto">
-                <div class="absolute top-0 mx-auto h-6 bg-boxColor-five" :class="isHoveredOption === 43 || isHoveredPrimary === 5 ? 'w-40' : 'w-full'"/>
+                <div class="absolute top-0 mx-auto h-6 bg-boxColor-five" :class="isHoveredOption === 43 || isHoveredPrimary === 5 ? 'w-44' : 'w-full'"/>
               </div>
               <!-- Relational Databases -->
               <div class="relative flex justify-center w-full h-5 mx-auto">
-                <div class="absolute top-0 mx-auto h-5 bg-boxColor-six" :class="isHoveredOption === 49 || isHoveredPrimary === 6 ? 'w-40' : 'w-full'"/>
+                <div class="absolute top-0 mx-auto h-5 bg-boxColor-six" :class="isHoveredOption === 49 || isHoveredPrimary === 6 ? 'w-44' : 'w-full'"/>
               </div>
               <div class="relative flex justify-center w-full h-3 mx-auto">
-                <div class="absolute top-0 mx-auto h-3 bg-boxColor-six" :class="isHoveredOption === 50 || isHoveredPrimary === 6 ? 'w-40' : 'w-full'"/>
+                <div class="absolute top-0 mx-auto h-3 bg-boxColor-six" :class="isHoveredOption === 50 || isHoveredPrimary === 6 ? 'w-44' : 'w-full'"/>
               </div>
               <div class="relative flex justify-center w-full h-5 mx-auto">
-                <div class="absolute top-0 mx-auto h-5 bg-boxColor-six" :class="isHoveredOption === 51 || isHoveredPrimary === 6 ? 'w-40' : 'w-full'"/>
+                <div class="absolute top-0 mx-auto h-5 bg-boxColor-six" :class="isHoveredOption === 51 || isHoveredPrimary === 6 ? 'w-44' : 'w-full'"/>
               </div>
               <div class="relative flex justify-center w-full h-4 mx-auto">
-                <div class="absolute top-0 mx-auto h-4 bg-boxColor-six" :class="isHoveredOption === 53 || isHoveredPrimary === 6 ? 'w-40' : 'w-full'"/>
+                <div class="absolute top-0 mx-auto h-4 bg-boxColor-six" :class="isHoveredOption === 53 || isHoveredPrimary === 6 ? 'w-44' : 'w-full'"/>
               </div>
               <!-- Non-Relational DataBases -->
               <div class="relative flex justify-center w-full h-2 mx-auto">
-                <div class="absolute top-0 mx-auto h-2 bg-boxColor-seven" :class="isHoveredOption === 58 || isHoveredPrimary === 7 ? 'w-40' : 'w-full'"/>
+                <div class="absolute top-0 mx-auto h-2 bg-boxColor-seven" :class="isHoveredOption === 58 || isHoveredPrimary === 7 ? 'w-44' : 'w-full'"/>
               </div>
               <!-- Version Control -->
               <div class="relative flex justify-center w-full h-3 mx-auto">
-                <div class="absolute top-0 mx-auto h-3 bg-boxColor-eight" :class="isHoveredOption === 60 || isHoveredPrimary === 8 ? 'w-40' : 'w-full'"/>
+                <div class="absolute top-0 mx-auto h-3 bg-boxColor-eight" :class="isHoveredOption === 60 || isHoveredPrimary === 8 ? 'w-44' : 'w-full'"/>
               </div>
               <div class="relative flex justify-center w-full h-1 mx-auto">
-                <div class="absolute top-0 mx-auto h-1 bg-boxColor-eight" :class="isHoveredOption === 61 || isHoveredPrimary === 8 ? 'w-40' : 'w-full'"/>
+                <div class="absolute top-0 mx-auto h-1 bg-boxColor-eight" :class="isHoveredOption === 61 || isHoveredPrimary === 8 ? 'w-44' : 'w-full'"/>
               </div>
               <div class="relative flex justify-center w-full h-3 mx-auto">
-                <div class="absolute top-0 mx-auto h-3 bg-boxColor-eight" :class="isHoveredOption === 62 || isHoveredPrimary === 8 ? 'w-40' : 'w-full'"/>
+                <div class="absolute top-0 mx-auto h-3 bg-boxColor-eight" :class="isHoveredOption === 62 || isHoveredPrimary === 8 ? 'w-44' : 'w-full'"/>
               </div>
               <div class="relative flex justify-center w-full h-2 mx-auto">
-                <div class="absolute top-0 mx-auto h-2 bg-boxColor-eight" :class="isHoveredOption === 63 || isHoveredPrimary === 8 ? 'w-40' : 'w-full'"/>
+                <div class="absolute top-0 mx-auto h-2 bg-boxColor-eight" :class="isHoveredOption === 63 || isHoveredPrimary === 8 ? 'w-44' : 'w-full'"/>
               </div>
             </div>
           </div>
@@ -368,7 +368,7 @@ const isHoveredOption = inject('isHoveredOption')
             </div>
             <div class="absolute top-[0.2rem] left-[0.15rem] z-10 bg-secundary-boxColorBack w-[99.8%] h-[2.8rem]"/>
         </div>
-    </div>
+      </div>
     </div>
   </div>
 </template>
