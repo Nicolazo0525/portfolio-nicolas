@@ -63,7 +63,7 @@ const getIsHoveredStudy = (data) => {
                     </div>
                 </div>
             </div>
-            <template v-if="isHoveredStudy === 1">
+            <template v-if="isHoveredStudy === 0 || isHoveredStudy === 1">
                 <div class="absolute type_writer_option left-[15rem] text-[#4C4840] font-medium top-[0.75rem] text-lg transform transition-transform duration-500 ease-in-out">
                     <span>- Academic Degrees</span>
                 </div>
