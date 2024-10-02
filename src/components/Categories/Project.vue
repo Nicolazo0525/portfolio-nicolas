@@ -153,7 +153,7 @@ const handleKeydown = (event) => {
               </div>
               <div class="w-full h-44">
                 <a href="https://evalunadistribuciones.mitiendanube.com/" class="w-full h-full flex justify-center items-center ease-in-out">
-                  <img src="../../../public/project/evaluna.webp" class="absolute w-full h-44 hover:w-72 hover:h-40 object-cover" alt="">
+                  <img src="../../../public/Project/evaluna.webp" class="absolute w-full h-44 hover:w-72 hover:h-40 object-cover" alt="">
                 </a>
               </div>
               <div class="text-justify m-2">
@@ -171,7 +171,7 @@ const handleKeydown = (event) => {
               </div>
               <div class="w-full h-44">
                 <a href="https://corposanpedro.website/" class="w-full h-full flex justify-center items-center ease-in-out">
-                  <img src="../../../public/project/image_web_corpo.webp" class="absolute w-full h-44 hover:w-72 hover:h-40 object-cover" alt="">
+                  <img src="../../../public/Project/image_web_corpo.webp" class="absolute w-full h-44 hover:w-72 hover:h-40 object-cover" alt="">
                 </a>
               </div>
               <div class="text-justify m-2">
@@ -191,7 +191,7 @@ const handleKeydown = (event) => {
               </div>
               <div class="w-full h-44 items-start">
                 <a href="https://tuaulaalamedida.com/" class="w-full h-full flex justify-center items-center ease-in-out">
-                  <img src="../../../public/project/tu_aula.webp" class="absolute w-full h-44 hover:w-72 hover:h-40 object-cover" alt="">
+                  <img src="../../../public/Project/tu_aula.webp" class="absolute w-full h-44 hover:w-72 hover:h-40 object-cover" alt="">
                 </a>
               </div>
               <div class="text-justify m-2">
@@ -208,7 +208,7 @@ const handleKeydown = (event) => {
               </div>
               <div class="w-full h-44">
                 <a href="https://tuaulaalamedida.com/" class="w-full h-full flex justify-center items-center ease-in-out">
-                  <img src="../../../public/project/tu_aula.webp" class="absolute w-full h-44 hover:w-72 hover:h-40 object-cover" alt="">
+                  <img src="../../../public/Project/tu_aula.webp" class="absolute w-full h-44 hover:w-72 hover:h-40 object-cover" alt="">
                 </a>
               </div>
               <div class="text-justify m-2">
@@ -225,7 +225,7 @@ const handleKeydown = (event) => {
               </div>
               <div class="w-full h-44">
                 <a href="https://www.instagram.com/cosmobellezadelhuila/" class="w-full h-full flex justify-center items-center ease-in-out">
-                  <img src="../../../public/project/instagram_cosmo_belleza.webp" class="absolute w-full h-44 hover:w-72 hover:h-40 object-cover" alt="">
+                  <img src="../../../public/Project/instagram_cosmo_belleza.webp" class="absolute w-full h-44 hover:w-72 hover:h-40 object-cover" alt="">
                 </a>
               </div>
               <div class="text-justify m-2">
