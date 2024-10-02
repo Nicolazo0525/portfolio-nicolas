@@ -92,7 +92,7 @@ onBeforeUnmount(()=>{
 </script>
 
 <template>
-    <main class="h-full items-center z-50 absolute w-[27rem]">
+    <div class="h-full items-center z-50 absolute w-[27rem]">
         <!-- Skills layout -->
         <template v-if="route.path === '/skills/'">
             <div class="flex flex-col flex-1">
@@ -322,7 +322,7 @@ onBeforeUnmount(()=>{
                 </div>
             </div>
         </template>
-    </main>
+    </div>
 </template>
 
 <style>

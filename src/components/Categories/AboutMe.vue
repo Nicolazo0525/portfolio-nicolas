@@ -171,7 +171,6 @@ const {getTrack, album, track, image, errorsAlbum} = useTrack(); */
             </div>
         </div>
     </div>
-    
 </template>
 
 <style>

@@ -5,6 +5,8 @@ import LayoutSkill from './components/layouts/LayoutSkill.vue';
 import MeshGrid from './components/MeshGrid.vue';
 import { useRoute } from "vue-router";
 import LayoutFooter from './components/layouts/LayoutFooter.vue';
+import LayoutStudy from './components/layouts/LayoutStudy.vue';
+
 
 const route = useRoute()
 const toggleLayout = ref(false)
@@ -22,6 +24,7 @@ const changeLayout = () => {
 const isHovered = ref(false)
 const isHoveredOption = ref(0)
 const isHoveredPrimary = ref(0)
+const isHoveredStudy = ref(0)
 
 provide('isHovered', isHovered)
 
@@ -29,6 +32,10 @@ provide('isHovered', isHovered)
 
 provide('isHoveredPrimary', isHoveredPrimary)
 provide('isHoveredOption', isHoveredOption)
+
+// Public Hovered Studies
+
+provide('isHoveredStudy', isHoveredStudy)
 
 </script>
 
@@ -60,6 +67,11 @@ provide('isHoveredOption', isHoveredOption)
       <template v-if="route.path === '/skills/'">
         <div class="left-0 relative">
           <layout-skill/>
+        </div>
+      </template>
+      <template v-if="route.path === '/studies/'">
+        <div class="left-0 relative">
+          <layout-study></layout-study>
         </div>
       </template>
       <div class="h-full w-full"><!-- left-[19.1rem] -->

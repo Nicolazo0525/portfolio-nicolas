@@ -319,14 +319,14 @@ onMounted(()=>{
                   </template>
                 </li>
                 <li>
-                  <template v-if="route.path === '/certificates/'">
+                  <template v-if="route.path === '/studies/'">
                     <div class="flex flex-row items-center">
                       <div class="">
                         <img src="../../../public/arrow_icon_two.png" alt="" class="w-8 pointer-events-none rotate-[-90deg] absolute top-0 right-[22.7em] order-1">
                       </div>
                       <div class="order-2 button_over cursor-pointer">
-                        <label for="Studie" class="">
-                          <router-link :to="{name: 'Certificate'}" v-slot="{ href, navigate }" class="">
+                        <label for="Study" class="">
+                          <router-link :to="{name: 'Study'}" v-slot="{ href, navigate }" class="">
                             <button :href="href" @click="navigate" @mouseover="show = true" @mouseleave="show = false" 
                             class="relative group boton-cambio-color uppercase items-center text-left px-2 pt-1 pb-4 w-36 transition-all duration-300 bg-[#4C4840] text-primary-default">
                               
@@ -347,8 +347,8 @@ onMounted(()=>{
                   <template v-else>
                     <div class="flex flex-row items-center">
                       <div class="order-2 button_over cursor-pointer items-center">
-                        <label for="Studie" class="hover:border-y-2 py-2 border-secundary-buttonDefoult flex-1">
-                          <router-link :to="{name: 'Certificate'}" v-slot="{ href, navigate }" class="items-center h-full">
+                        <label for="Study" class="hover:border-y-2 py-2 border-secundary-buttonDefoult flex-1">
+                          <router-link :to="{name: 'Study'}" v-slot="{ href, navigate }" class="items-center h-full">
                             <button :href="href" @click="navigate" @mouseover="show = true" @mouseleave="show = false" value="4"
                               class="relative group inline-block px-2 overflow-hidden uppercase items-center text-left w-36 h-8 text-primary-buttonText bg-primary-butonBack  btn-ola hover:text-primary-default transition-colors cursor-pointer">
                               

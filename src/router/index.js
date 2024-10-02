@@ -1,7 +1,7 @@
 import { createRouter, createWebHistory } from 'vue-router';
 
 import AboutMe from '../components/Categories/AboutMe.vue';
-import Certificate from '../components/Categories/Certificate.vue';
+import Study from '../components/Categories/Study.vue';
 import Project from '../components/Categories/Project.vue';
 import Skill from '../components/Categories/Skill.vue';
 import Media from '../components/Categories/Media.vue';
@@ -20,19 +20,19 @@ const routes = [
         component: AboutMe
     }, */
     {
+        path: "/skills/",
+        name: "Skill",
+        component: Skill
+    },
+    {
         path: "/projects/",
         name: "Project",
         component: Project
     },
     {
-        path: "/certificates/",
-        name: "Certificate",
-        component: Certificate
-    },
-    {
-        path: "/skills/",
-        name: "Skill",
-        component: Skill
+        path: "/studies/",
+        name: "Study",
+        component: Study
     },
     {
         path: "/media/",
