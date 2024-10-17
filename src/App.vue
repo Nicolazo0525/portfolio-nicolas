@@ -6,7 +6,7 @@ import MeshGrid from './components/MeshGrid.vue';
 import { useRoute } from "vue-router";
 import LayoutFooter from './components/layouts/LayoutFooter.vue';
 import LayoutStudy from './components/layouts/LayoutStudy.vue';
-
+import LayoutMedia from './components/layouts/LayoutMedia.vue';
 
 const route = useRoute()
 const toggleLayout = ref(false)
@@ -25,6 +25,7 @@ const isHovered = ref(false)
 const isHoveredOption = ref(0)
 const isHoveredPrimary = ref(0)
 const isHoveredStudy = ref(0)
+const isHoveredMedia = ref(0)
 
 provide('isHovered', isHovered)
 
@@ -36,6 +37,10 @@ provide('isHoveredOption', isHoveredOption)
 // Public Hovered Studies
 
 provide('isHoveredStudy', isHoveredStudy)
+
+// Public Hovered Media
+
+provide('isHoveredMedia', isHoveredMedia)
 
 </script>
 
@@ -74,6 +79,11 @@ provide('isHoveredStudy', isHoveredStudy)
           <layout-study></layout-study>
         </div>
       </template>
+      <template v-if="route.path === '/media/'">
+        <div class="left-0 relative">
+          <layout-media></layout-media>
+        </div>
+      </template>
       <div class="h-full w-full"><!-- left-[19.1rem] -->
         <router-view/>
       </div>
@@ -90,7 +100,7 @@ provide('isHoveredStudy', isHoveredStudy)
   width: 100%;
   height: 100vh;
   background: url('../public/grid-line-front-mini.png') repeat;
-  background-size: 70%; /* Ajusta el tamaño del grid según tus necesidades */
+  background-size: 69%; /* Ajusta el tamaño del grid según tus necesidades */
   z-index: 60;
   filter: brightness(110%);
   image-rendering: pixelated;

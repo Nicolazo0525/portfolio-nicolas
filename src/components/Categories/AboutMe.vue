@@ -13,7 +13,60 @@ const {getTrack, album, track, image, errorsAlbum} = useTrack(); */
 </script>
 
 <template>
-    <div class="h-full w-full relative flex flex-col justify-start pt-20 pb-10 overflow-hidden"><!-- dark:bg-secundary-buttonlagout -->
+    <div class="h-full w-full relative flex flex-col justify-start space-y-24 pb-10 overflow-hidden"><!-- dark:bg-secundary-buttonlagout -->
+        <div class="relative ml-12">
+            <div class="w-full">
+              <div class="flex flex-row">
+                <div class="absolute left-[0.3rem] top-1 text-secundary-buttonlagout text-4xl flex flex-row space-x-1 ">
+                  <div class="text-4xl uppercase">
+                    A
+                  </div>
+                  <div class="text-4xl uppercase">
+                    B
+                  </div>
+                  <div class="text-4xl uppercase">
+                    O
+                  </div>
+                  <div class="text-4xl uppercase">
+                    U
+                  </div>
+                  <div class="text-4xl uppercase">
+                    T
+                  </div>
+                  <div class="text-4xl pl-2 uppercase">
+                    M
+                  </div>
+                  <div class="text-4xl uppercase">
+                    E
+                  </div>
+                </div>
+                <!-- Tittle -->
+                <div class="absolute top-0 text-primary-buttonText text-4xl flex flex-row space-x-1">
+                    <div class="text-4xl uppercase">
+                        A
+                      </div>
+                      <div class="text-4xl uppercase">
+                        B
+                      </div>
+                      <div class="text-4xl uppercase">
+                        O
+                      </div>
+                      <div class="text-4xl uppercase">
+                        U
+                      </div>
+                      <div class="text-4xl uppercase">
+                        T
+                      </div>
+                      <div class="text-4xl pl-2 uppercase">
+                        M
+                      </div>
+                      <div class="text-4xl uppercase">
+                        E
+                      </div>
+                </div>
+              </div>
+            </div>
+          </div>
         <div class="flex flex-row ml-12">
             <div class="order-1 left-0 flex flex-row space-x-1 opacity-0 transform transition-transform duration-500 ease-in-out -translate-x-full animate-slite-vertical">
                 <div class="w-[0.7rem] h-full bg-primary-butonBack"/>
