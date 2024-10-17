@@ -100,7 +100,9 @@ provide('isHoveredMedia', isHoveredMedia)
   width: 100%;
   height: 100vh;
   background: url('../public/grid-line-front-mini.png') repeat;
-  background-size: 69%; /* Ajusta el tamaño del grid según tus necesidades */
+  /*
+  background-size: 69%; Ajusta el tamaño del grid según tus necesidades 
+  */
   z-index: 60;
   filter: brightness(110%);
   image-rendering: pixelated;

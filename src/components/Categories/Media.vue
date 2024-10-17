@@ -5,58 +5,61 @@ import { useRoute, useRouter } from "vue-router";
 const isHoveredMedia = inject('isHoveredMedia')
 </script>
 <template>
-    <div class="flex flex-col w-full h-full px-12 pl-[30rem] pt-20 pb-28 ">
+    <div class="flex flex-col w-full h-full px-12 pl-[30rem] pt-20 pb-[7rem]">
         
         <template v-if="isHoveredMedia === 0 || isHoveredMedia === 1">
-            <div class="flex flex-row space-x-7 w-full h-full pb-20">
+            <div class="flex flex-row space-x-7 w-full h-full">
           
-                <div class="order-1 flex flex-col w-full space-y-2 overflow-y-auto">
-                  <div class="order-1 w-full grid grid-rows-2 grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-2">
-                      <div class="order-1 row-span-2 col-span-2 w-full h-full">
-                          <img src="../../../public/Media/cuidado_color.jpg" class="w-full h-[30rem] object-cover" alt="">
-                      </div>
-                      <div class="order-2 w-full h-full">
-                          <img src="../../../public/Media/hidrata.jpg" class="w-full h-full object-cover" alt="">
-                      </div>
-                      <div class="order-3 w-full h-full">
-                          <img src="../../../public/Media/oligomik.jpg" class="w-full h-full object-cover" alt="">
-                      </div>
-                      <div class="order-4 w-full h-full">
-                          <img src="../../../public/Media/caspa.jpg" class="w-full h-full object-cover" alt="">
-                      </div>
-                      <div class="order-5 w-full h-full">
-                          <img src="../../../public/Media/super_combo.jpg" class="w-full h-full object-cover" alt="">
-                      </div>
+                <div class="order-1 flex flex-col w-full h-full space-y-2 overflow-y-auto">
+                    <div class="order-1 w-full grid grid-rows-2 grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-2">
+                        <div class="order-1 row-span-2 col-span-2 w-full h-full">
+                            <img src="../../../public/Media/cuidado_color.jpg" class="w-full h-full object-cover" alt="">
+                        </div>
+                        <div class="order-2 w-full h-full">
+                            <img src="../../../public/Media/hidrata.jpg" class="w-full h-full object-cover" alt="">
+                        </div>
+                        <div class="order-3 w-full h-full">
+                            <img src="../../../public/Media/oligomik.jpg" class="w-full h-full object-cover" alt="">
+                        </div>
+                        <div class="order-4 w-full h-full">
+                            <img src="../../../public/Media/caspa.jpg" class="w-full h-full object-cover" alt="">
+                        </div>
+                        <div class="order-5 w-full h-full">
+                            <img src="../../../public/Media/super_combo.jpg" class="w-full h-full object-cover" alt="">
+                        </div>
                     </div>
-                      <div class="order-2 w-full grid grid-rows-2 grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-2">
-                          <div class="order-6 w-full h-full">
-                              <img src="../../../public/Media/hidrata.jpg" class="w-full h-full object-cover" alt="">
-                          </div>
-                          <div class="order-7 w-full h-full">
-                              <img src="../../../public/Media/minoxidil.jpg" class="w-full h-full object-cover" alt="">
-                          </div>
-                          <div class="order-8 row-span-2 col-span-2 w-full h-full">
-                              <img src="../../../public/Media/publicacion_1_ultra_color3.jpg" class="w-full h-full object-cover" alt="">
-                          </div>
-                          <div class="order-9 w-full h-full">
-                              <img src="../../../public/Media/oligomik.jpg" class="w-full h-full object-cover" alt="">
-                          </div>
-                          <div class="order-10  w-full h-full">
-                              <img src="../../../public/Media/aminoacidos.jpg" class="w-full h-full object-cover" alt="">
-                          </div>
-                      </div>
+                    <div class="order-2 w-full grid grid-rows-2 grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-2">
+                        <div class="order-6 w-full h-full">
+                            <img src="../../../public/Media/hidrata.jpg" class="w-full h-full object-cover" alt="">
+                        </div>
+                        <div class="order-7 w-full h-full">
+                            <img src="../../../public/Media/minoxidil.jpg" class="w-full h-full object-cover" alt="">
+                        </div>
+                        <div class="order-8 row-span-2 col-span-2 w-full h-full">
+                            <img src="../../../public/Media/publicacion_1_ultra_color3.jpg" class="w-full h-full object-cover" alt="">
+                        </div>
+                        <div class="order-9 w-full h-full">
+                            <img src="../../../public/Media/oligomik.jpg" class="w-full h-full object-cover" alt="">
+                        </div>
+                        <div class="order-10  w-full h-full">
+                            <img src="../../../public/Media/aminoacidos.jpg" class="w-full h-full object-cover" alt="">
+                        </div>
+                    </div>
                 </div><!-- 
                 <iframe width="560" height="315" src="https://www.youtube.com/embed/em6CjV7ApvE?si=ThflcWJFx1oJRwrH" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> -->
               </div>
         </template>
         <template v-if="isHoveredMedia === 2">
-            <div class="order-1 flex flex-col w-full space-y-2 overflow-y-auto">
+            <div class="order-2 flex flex-col w-full overflow-y-auto">
                 <div class="w-full grid grid-cols-3 gap-3">
                     <div class="w-56 h-96">
                         <iframe class="w-56 h-96" width="560" height="315" src="https://www.youtube.com/embed/P5JsDthC5sY?si=kwlmiwMYnKFKpYFk" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                     </div>
                     <div class="w-56 h-96">
                         <iframe class="w-56 h-96" width="560" height="315" src="https://www.youtube.com/embed/3pb_xLQsSqA?si=lXnS2ESODbqXPawX" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>
+                    <div class="w-56 h-96">
+                        <iframe class="w-56 h-96" width="560" height="315" src="https://www.youtube.com/embed/em6CjV7ApvE?si=ThflcWJFx1oJRwrH" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                     </div>
                     <div class="w-56 h-96">
                         <iframe class="w-56 h-96" width="560" height="315" src="https://www.youtube.com/embed/em6CjV7ApvE?si=ThflcWJFx1oJRwrH" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
